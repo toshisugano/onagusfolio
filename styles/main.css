@@ -1,0 +1,718 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+@charset "UTF-8";
+
+{
+    -webkit-transform:translate3d(0,0,0);
+    -webkit-text-stroke-width: 0.3px;
+}  
+
+html {
+    width : 100%;
+    margin : 0px;
+} 
+
+body { 
+    background: white;
+    color: #e6eed9; 
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+    background-position: center;
+    margin: 70px auto 0px;
+    width: 100%;   
+}
+  
+
+/*NAVIGATION*/
+.containerNav {
+    top: 0px;  
+    width : 100%;
+    height: 70px;
+    background-color : white;
+    position: fixed; 
+    z-index : 50;
+    display : block;
+ }
+
+nav a {
+    display: inline;
+    text-decoration: none;
+    margin: 0 50px 0 auto;
+    color: black;
+    padding: 40px 0px 0px 0px;
+}
+
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    height: 70px;
+    display : inline-block;
+    position : relative; 
+    border-bottom: 1px solid #a6a4a0;
+
+    /*border-radius: 50px;*/
+}
+
+#social {
+    margin-left: -8px;
+    height: 100px;
+    width: 500px; 
+}
+
+.social {  
+    margin-left : -10px; 
+    display : block;
+    position : relative; 
+}
+
+.links { 
+    display : block;
+    position : relative;
+    margin-top : -45px;
+    margin-left : 60px;
+    font-size : 1.5em;
+} 
+
+#socialContainer {
+    display: inline;
+    margin: 0px 5px ;
+
+}
+
+.navWindow {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    vertical-align: top;  
+    display : block;
+}
+
+#menu {
+    padding: 40px;
+    white-space: nowrap;
+    font : Lato, arial, sans-serif;
+    font-size: 1.25em;
+}
+
+#menu a:hover{
+    background-color: #f7b321;
+}
+
+#scroll-to-top:hover {
+    color: #f7b321;
+
+}
+
+#scroll-to-top {
+    padding: 0px 0px 0px 0px;
+    font-family:  Lato, arial, sans-serif;
+    color: ;
+    margin-left: 12px;
+    float: left;
+    height: 55px;
+    
+}
+
+.containerMain {
+    margin-left : auto;
+    margin-right : auto; 
+    max-width: 1000px; 
+    margin-bottom: -16px;
+    z-index: 0;
+    background-color: #39201b; 
+    /**/
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.containerMain p {
+    font-family : Lato;
+}
+
+
+/*BACKGROUND CONTAINER*/
+
+
+.bandOrange {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto ;
+    background-color: #f7b321;
+    position: relative;
+    border-bottom: 1px solid #a6a4a0;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.bandOrangeContact {
+    width: 100%;
+    display: inline-block;
+    margin: 0px 0px 13px 0px ;
+    background-color: #f7b321;
+    position: relative;
+}
+
+.containerBackgroundMain {
+    width: 100%; 
+    z-index: 0;
+    background-color: #ededed;
+}
+
+.containerBackground {
+    background-color: white;
+    z-index: 0;
+    width: 1000px;
+    height: 440px;
+    background: url(../images/onagusMain.jpg);
+    margin: 0 auto ;
+    position: relative;
+    text-align: center;
+    border: none;
+    
+}
+
+/*MAIN*/
+.container1 {
+    display: block;
+    width: 101%; 
+    height: 99%;
+    border: none;
+    position: relative;
+    overflow: hidden; 
+    margin-bottom: -3px;
+}
+
+.container1 img { 
+    width: 99%; 
+}
+
+#logo {
+    margin-top: 16px;
+}
+
+#navBar {
+    margin-top: -25px;
+    margin-right: 10px;
+}
+
+#navBar li{ 
+    font-color: black;
+    list-style-type: none;
+    float: right;
+    display: inline;
+    position: relative; 
+}
+
+.navLink { 
+    display: inline;
+    position: relative;
+    padding-left: 10px;
+    margin-top : -30px;
+}
+
+/*ABOUT*/
+.container2 {
+    max-width: 1000px;
+    margin: 0 auto; 
+    position: relative;
+    background-color: #494745;
+}
+
+.aboutWrapper {
+    margin: 0 13px 0px 13px;
+    padding: 10px 20px 30px 20px;
+    max-width: 972px;
+    background-color: #e7f7f7;
+    height: 100%;
+    display: inline-block; 
+    position: relative;  
+}
+
+/*FOLIO*/
+#container3 {
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    border: none;
+    background-color: #494745;
+    position: relative;
+}
+
+.contactWrapper {
+    margin: 0 13px 0px 13px;
+    padding: 10px 20px 30px 20px;
+    max-width: 972px;
+    background-color: #e7f7f7;
+    height: 100%;
+}
+
+#container4 {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    border: none;
+    background-color: #494745;
+    position: relative;
+}
+
+.folioWrapper {
+    margin: 0 13px 0px 13px;
+    max-width: 972px;
+    min-height: 500px;
+    background-color: #e7f7f7;
+    display : block;
+} 
+
+.folioCenter {
+    width: 100%;
+    height: 100%;
+    margin: 0 0px 0 -0px;
+    padding-left : -1px;
+    background-color: #494745;
+    overflow: hidden;
+    text-align: center; 
+    display : block;
+}
+
+.wrapper {
+    display: block;
+    padding: 5px 40px 40px 30px;
+    position: relative;   
+}
+
+a { 
+    font-family : Lato;
+    font-size : 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    margin-top : -5px;
+    padding-top : 30px;
+}
+
+li { 
+    margin-top : 10px;
+    list-style-type : none;
+}
+
+.bandOrange a {
+    vertical-align: bottom;
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+}
+
+
+#imgOrange {
+    height: 72px;
+}
+
+.name {
+    margin-top: 10px;
+    height: 40px;
+    width: 200px;
+    border: 0px;
+}
+
+.nameLabel {
+    height: 40px;
+    padding: -5px -5px -5px -5px;
+    color: white;
+    background-color: #423a38;
+}
+
+h1 {
+    margin-top: 22px;
+    font-family: Lato, arial, sans-serif;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-style: none;
+    color: #4c4d47;
+    font-family:  Lato, arial, sans-serif;
+}
+
+h3 {
+    font-size: 1.74em;
+    font-style: none;
+    color: #bdb9a8;
+    font-family: Lato, arial, sans-serif;
+}
+
+h4 {
+    color: white;
+    text-decoration: none;
+}
+
+hr {
+    width: 100%;
+    background:#f7b321;
+    border: 0;
+    height: 1px;
+}
+
+p { 
+    line-height: 1.5em;
+    color: #f8f4e3;
+}
+
+.about { 
+    color : white;
+    font-size: 1.5em;  
+}
+ 
+
+ 
+#contact-button { 
+    background: rgba(56,31,26,10);;
+    width: 100px;
+    height: 25px; 
+}
+
+#submit {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#vruler1 {
+    float: right; 
+    min-height: 500px;
+    width: 0px;
+    border: 1px solid white;
+}
+
+.tag {
+    padding: 5px 5px 5px 5px;
+    background: rgba(56,31,26,10);
+    display: inline-block;
+    border: #fceecb 2px solid;
+    border-radius: 7px;
+    margin: 5px 5px 0 0;
+    color: white;
+}
+
+.tagWhite {
+    background: rgba(56,31,26,10);
+    padding: 10px 10px 10px 10px;
+    border-radius: 12px;
+    color: white;
+    margin: 0px 0px 0px 15px;
+    white-space: nowrap;
+    
+}
+
+#tagWindow {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 0px 20px 30px 20px;
+  height: 400px;
+  width: 20%;
+  background-color: #fceecb; 
+  border: 1px ;
+  float: right; 
+}
+
+#tagNews {
+  display: inline-block;
+  height: 400px;
+  width: 22%;
+  background: #fceecb;
+  border: 1px green;
+  float: left; 
+  margin: 30px 10px 5px 10px;
+
+}
+
+#tagNewsPage {
+  height: 66%;
+  width: 100%;
+  background: #fceecb;
+  border: 1px green;
+
+}
+
+#tagNewsFooter {
+  height: 33%;
+  width: 100%;
+  background: #39201b;
+  border: 1px green;
+}
+
+textarea {
+    width: 100%
+}
+
+.footerBase {
+    max-width: 990px;
+    min-height: 50px;
+    background-color: #39201b;
+    margin: -15px auto 0px auto;
+    margin-bottom : -16px;
+    text-align: top;
+    z-index: 50;
+    padding-left: 10px; 
+}
+
+.footerWrapper {
+    margin: 0 13px 0px 13px;
+    padding: 10px 20px 30px 20px;
+    max-width: 972px;
+    background-color: #39201b;
+    height: 100%;
+    z-index: 50;
+}
+
+.footerBase p{
+    color: white;
+}
+
+.folioDiv20 {
+    margin: 0px 20px 0px 0px;
+    display: inline-block;
+    width: 240px;
+    min-height: 460px;
+    background-color: #494745;
+    vertical-align: top;    
+}
+
+
+.folioImage20 {
+    width: 100%;
+}
+
+.folioImage20 img{ 
+    width: 100%;
+    background-color: #494745;
+}
+
+.folioDescription20 {
+    background-color: #494745;
+    padding: 10px 2px 10px 2px;
+    overflow: hidden;
+    margin: 0px auto;
+    font-size: 1.2rem;
+    font-family: Lato, arial, sans-serif;
+}
+
+.folioTitle {
+    padding-top: 5px;
+    background-color: #494745;
+    font-family: Lato, arial, sans-serif;
+    font-size: 2em;
+
+}
+
+.folioTag {
+    background-color: #f7b321;
+    padding: 5px 10px 5px 10px;
+    border-radius: 6px;
+    color: white;
+    margin: 0px auto;
+    white-space: nowrap;
+    width: 50%; 
+    margin-bottom : 20px;
+}
+
+.folioTag a {
+    font-size : 1.25rem;
+}
+
+.copyRight {
+        color: #f8f4e3;
+        margin: 15px auto;
+        text-align: center;
+        white-space: nowrap;
+        font-family: Lato, arial, sans-serif;
+        font-size: 1.25em;
+    }
+
+textarea {
+    width: 200px;
+    height: 5em;
+    border: 0px;
+    margin-top: 15px;
+}
+
+input, select, textarea {
+    font-size: 133%;
+}
+
+@media (min-width: 200px) and (max-width: 640px) {  
+    #aboutHeader {
+        display : none;
+    }
+
+    .containerMain {
+        margin : 0 auto;
+        display : inline-block;
+        position : relative; 
+        max-width : 1000px;
+    }
+
+    .containerMain p { 
+        font-family : Roboto;
+        font-size : 1.5em;
+        color : white;
+    }
+
+    p {
+        font-family : Roboto;
+        font-size : 1.5em;
+        color : white;
+    }
+
+    h3 {
+        font-family : Roboto;
+        font-size : 2em;
+        color : grey;
+    }
+
+     .social {
+        margin-left : -15px;
+    }
+
+
+    .bandOrange img {
+        display:  none; 
+    }
+
+    .tagWhite a { 
+        font-family : Lato;
+        font-size : 1.5em;
+        color : white;
+        margin-left: 2px;
+        line-height: 30px;
+    }
+
+    nav a {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .bandOrange a {
+        line-height: 50px;
+        vertical-align: top;
+    }
+
+    .folioDiv20 {
+        position : relative;
+        display : inline-block;
+        width: 100%; 
+        padding: 0px -1px 0px -1px;
+    }
+
+    .folioDescription20 {  
+        color : white;
+        margin-bottom : 10px;
+        font-family : Roboto;
+        font-size : 1.5em;
+        color : white;
+    }
+
+    .folioTitle {  
+        font-family : Roboto;
+        font-size : 2em;
+        color : white;
+    }
+
+    .folioWrapper {
+        padding: 0px 0px 0px 0px;  
+        display : block;
+    }
+
+    .folioTag a{
+        font-family : Roboto;
+        font-size : 2em;
+        color : white;
+    }
+
+    .containerBackground {
+        width: 100%; 
+    }
+
+    #navBar {
+        display : none;
+    }
+
+    #tagHeader {
+        display : none;
+    }
+
+    .tag {
+        display : none;
+    }
+
+}
+
+@media (min-width: 641px) and (max-width: 780px) {  
+    .containerMain p { 
+        font-family : Roboto;
+        font-size : 1.75em;
+        color : white;
+    }
+
+    p {
+        font-family : Roboto;
+        font-size : 1.75em;
+        color : white;
+    }
+
+    h3 {
+        font-family : Open Sans;
+        font-size : 2em;
+        color : grey;
+    }
+    .folioTag a{
+        font-family : Roboto;
+        font-size : 1.75em;
+        color : white;
+    }
+
+    .folioTitle {  
+        font-family : Roboto;
+        font-size : 1.75em;
+        color : white;
+    }
+    .folioDescription20 {  
+        color : white;
+        margin-bottom : 10px;
+        font-family : Roboto;
+        font-size : 1.75em;
+        color : white;
+    }
+    .tagWhite a { 
+        font-family : Roboto;
+        font-size : 1.75em;
+        color : white;
+        margin-left: 2px;
+        line-height: 30px;
+    }
+
+
+}
+
+@media (min-width: 641px) {
+    
+    .folioDiv20 {
+        width: 33.3334%;
+        margin: 0px 0px 0px 0px;
+    }
+
+} 
+
+.fa-stack-1x {
+    color:white;
+}
+.icon-github, .icon-envelope-o, .icon-phone {
+   color: rgba(56,31,26,10);   
+}
+
+ 

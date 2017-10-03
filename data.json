@@ -1,0 +1,15 @@
+
+[
+	{  
+	   "id":1,
+	   "name":"Toshi",
+	   "lastname":"Sugano",
+	   "school":"Georgia Tech"
+	},
+	{  
+	   "id":2,
+	   "name":"Mike",
+	   "lastname":"Wilder",
+	   "school":"UGA"
+	}
+]
