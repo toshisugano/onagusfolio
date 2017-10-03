@@ -4,7 +4,7 @@ var express = require('express');
   
 var mainUrl = '//www.thesoogie.com/';   
 
-var port =  8000;  
+var port = process.env.PORT || 8000;  
  
 app.use('/styles', express.static(__dirname + '/styles'));
 app.use('/images', express.static(__dirname + '/images'));
