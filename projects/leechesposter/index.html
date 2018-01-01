@@ -1,11 +1,11 @@
+
 <!doctype html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>folio</title>
+        <title>Onagus - Full Stack Designer Developer </title>
         <meta name="description" content=""> 
-        <link rel="shortcut icon" href="/favicon.ico">
-        <!--Gaps between DIVS on Ipad and Iphone-->
+        <link rel="shortcut icon" href="/favicon.ico"> 
         <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=0;"> 
  
         <link rel="stylesheet" href="styles/main.css">
@@ -15,12 +15,57 @@
     <body> 
         <div class="containerNav"> 
             <nav class="navWindow">
-                <img id="logo" src="/images/logo.jpg"> 
+                <h1 id="logo">ONAGUS</h1>
             </nav> 
         </div>  
         <!--MAIN-->
         <div class="containerMain"> 
-            <img src="/images/leechesPoster.jpg"/>
+            
+        <!--Folio-->
+            <div class="bandOrange">
+                <div id="folio_section" class="navWindow">  
+                    <a id="buttonAll" class="tagWhite" href="">All</a>
+                    <a id="buttonJS" class="tagWhite" href="">Javascript</a>
+                    <a id="buttonVisual" class="tagWhite" href="">Visual</a>
+                </div>
+            </div> 
+            <div id="container4"> 
+                <div class="folioWrapper"> 
+                    <div class="folioCenter">
+                        <img src="/images/leechesPoster.jpg"/> 
+                    </div>            
+                </div>
+            </div> 
+            <div class="bandOrange">
+                <div id="contact_section" class="navWindow">
+                    <img id="imgOrange" src="images/contactMe.gif"/>
+                </div>
+            </div>
+            <div id="container3"> 
+                <ul> 
+                    <li class="social">   
+                        <a href="http://github.com/toshisugano" target="blank" class="fa-stack fa-2x icon-github ">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x"></i> 
+                        </a>
+                        <p class="links">@ Github</p>  
+                    </li> 
+                    <li class="social">
+                        <a href="mailto:onagususa@gmail.com" class="fa-stack fa-2x icon-envelope-o">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-envelope-o fa-stack-1x"></i>
+                        </a> 
+                          <p class="links">onagususa@gmail.com</p>   
+                    </li>  
+                    <li class="social">
+                        <a href="tel:+1-770-568-1348" class="fa-stack fa-2x icon-phone">
+                          <i class="fa fa-square fa-stack-2x"></i>
+                          <i class="fa fa-phone fa-stack-1x"></i> 
+                        </a> 
+                        <p class="links">#Cell </p>   
+                    </li>  
+                </ul> 
+            </div>  
             <footer class="footerBase">
                 <p class="copyRight">Copyright 2016 Toshi Sugano</p>
             </footer>
@@ -39,9 +84,11 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script> 
+        </script>
+ 
+
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/mainProjects.js"></script>
         <!-- endbuild -->
 </body>
 </html>

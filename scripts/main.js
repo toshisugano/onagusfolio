@@ -1,11 +1,13 @@
 var winWidth = $(window).width();
 $('.containerMain').css({"width" : winWidth}); 
- 
+var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157645079323413&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
+var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157691750682445&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
+var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 
-function flickrAPI(){
+
+function flickrAPI(url){
     //create a var that makes a call to the flickr API
-    var getIMG = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157645079323413&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
-    //pass the getIMG var through the getJSON function
+    var getIMG = url;//pass the getIMG var through the getJSON function
     $.getJSON(getIMG, function(data){
         //Loop through each of the photos
         $.each(data.photoset.photo, function(index, photo){ 
@@ -67,7 +69,7 @@ function flickrAPI(){
 
 }
 
-flickrAPI ();//end flickrAPI
+ 
 
 function socialMediaList() { 
         var socialLinks = {
@@ -82,10 +84,7 @@ function socialMediaList() {
             $(icons).appendTo(social).wrap(a_href);
             console.log(icons); 
         });
-} 
- 
-socialMediaList();
- 
+}  
 
 function checkVerticalOffset() {
 	var mediaQuery = window.matchMedia( "(min-width: 640px)" );
@@ -95,14 +94,8 @@ function checkVerticalOffset() {
 	else {
 		return -70;
 	}
-}
-// if the media query returns a min width 452px then return an vertical offset of -140
-// else return an offset of -120
- 
+} 
 
-/**
-scroll to element function
-**/
 function scrollToElement(selector, time, verticalOffset) {
 var time = typeof(time) != 'undefined' ? time : 600;
 var verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
@@ -139,27 +132,29 @@ $('#contact-button').on('click touchstart',function(e){
 
 
 $(document).ready(function() {
-/* scroll to #containerX */
-$('#about').on('click touchstart',function (e) { 
-e.preventDefault();  
-scrollToElement('#about_section', 500, checkVerticalOffset());
+/* scroll to #containerX */ 
+
+$('#buttonAll').on('click', function(e){
+    e.preventDefault();
+    $('.folioCenter').empty();
+    flickrAPI (allUrl);
 });
 
-$('#contact').on('click touchstart',function (e) {
-e.preventDefault();
-scrollToElement('#contact_section', 500, checkVerticalOffset());
+$('#buttonJS').on('click', function(e){
+    e.preventDefault();
+    $('.folioCenter').empty();
+    flickrAPI(jsUrl);
 });
 
-$('#folio').on('click touchstart',function (e) {
-e.preventDefault(); 
-scrollToElement('#folio_section', 600, checkVerticalOffset());
+$('#buttonVisual').on('click', function(e){
+    e.preventDefault(); 
+    $('.folioCenter').empty();
+    flickrAPI(visualUrl); 
 });
 
-/* back to top */
-$('#scroll-to-top').on('click touchstart',function (e) {
-e.preventDefault();
-scrollToElement('.container1', 500, checkVerticalOffset());
-});
+flickrAPI(allUrl);
+socialMediaList(); 
+ 
 }); 
 
 
