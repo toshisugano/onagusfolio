@@ -144,18 +144,21 @@ $('#buttonAll').on('click', function(e){
     e.preventDefault();
     $('.folioCenter').empty();
     flickrAPI (allUrl);
+    window.location = 'onagus.co'
 });
 
 $('#buttonJS').on('click', function(e){
     e.preventDefault();
     $('.folioCenter').empty();
     flickrAPI(jsUrl);
+    window.location = 'onagus.co'
 });
 
 $('#buttonVisual').on('click', function(e){
     e.preventDefault(); 
     $('.folioCenter').empty();
     flickrAPI(visualUrl); 
+    window.location = 'onagus.co'
 });
  
  
