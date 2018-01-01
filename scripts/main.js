@@ -41,14 +41,16 @@ function flickrAPI(url){
                 $.each(data.photo.tags.tag, function(index, object){
                     //Create a variable that stores each of the tags
                     var tagString = object.raw; 
-                    if (tagString === 'www.tvapocalypse.herokuapp.com'){
-                        tagString = 'tvapocalypse.herokuapp.com';
-                    }
+                    
                     var regex = /www/i;
                     var testregex = regex.test(tagString);
                     var a_href = 'http://' + tagString;
-                    if (testregex == true) {
-                        
+
+                    if (tagString === 'www.tvapocalypse.herokuapp.com'){
+                        a_href = 'http://' + 'tvapocalypse.herokuapp.com';
+                    }
+
+                    if (testregex == true) { 
                         //Create a JQuery div whose class is folioTag
                         var folioFooter = $("<div></div>", {"class": "folioTag"}).appendTo(folio);
                         //Create a variable called valueLink that creates an href incorporating tagString

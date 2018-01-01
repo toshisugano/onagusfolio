@@ -47,6 +47,11 @@ function flickrAPI(url){
                     var regex = /www/i;
                     var testregex = regex.test(tagString);
                     var a_href = 'http://' + tagString;
+
+                    if (tagString === 'www.tvapocalypse.herokuapp.com'){
+                        a_href = 'http://' + 'tvapocalypse.herokuapp.com';
+                    }
+
                     if (testregex == true) {
                         
                         //Create a JQuery div whose class is folioTag
