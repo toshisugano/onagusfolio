@@ -16,8 +16,8 @@ html {
 } 
 
 body { 
-    background: white;
-    color: #e6eed9; 
+    background: black;
+    color: white; 
     text-decoration: none;
     font-size: 14px;
     line-height: 1;
@@ -31,12 +31,12 @@ body {
 .containerNav {
     top: 0px;  
     width : 100%;
-    height: 70px;
-    background-color : white;
+    height: 40px;
+    background-color : black;
     position: fixed; 
     z-index : 50;
     display : block;
-    border-bottom: 5px solid #f7b321;
+    border-bottom: 37px solid #494745; 
  }
 
 nav a {
@@ -90,22 +90,27 @@ nav {
     position : inline;
     margin-left : auto;
     margin-right : auto; 
-    max-width: 1000px; 
+    margin-top : -15px;
+    max-width: 1400px; 
     border : 0px solid;
+    z-index: 0;
+    height: 25px;
 }
 
 
 .headerWindow h1 { 
-    color : #39201b; 
-    font-size : 2.9rem;
+    color : white; 
+    font-family : 'Share Tech Mono';
+    font-size : 1rem;
 }
 
 .navWindow { 
     margin: 0 auto;
     position: relative;  
     display : block;
-    border : 0px;    
-
+    border : 0px;   
+    height : 5px; 
+    margin-top : -18px;
 }
 
 #about_section {
@@ -122,6 +127,7 @@ nav {
     vertical-align : middle;
 }
 
+ 
 .navWindow h1 { 
     color : #39201b; 
     font-size : 2.9rem;
@@ -132,10 +138,12 @@ nav {
 
 .navWindow a {
     margin-top : 0px;
+    font-size : 1rem;
 }
 
 #logo {
     margin-left : 20px;
+
 }
 
 #menu {
@@ -165,18 +173,41 @@ nav {
 }
 
 .containerMain {
+    display : block;
+    position : relative;
     margin-left : auto;
     margin-right : auto; 
-    max-width: 1000px; 
+    
+    width : 100%;
+    max-width: 1400px;
+    min-width: 300px;
+    margin-top : -28px; 
     margin-bottom: -16px;
     z-index: 0;
-    background-color: #39201b; 
+    background-color: black; 
     /**/
     -webkit-transform: translate3d(0,0,0);
 }
 
 .containerMain p {
     font-family : 'Share Tech Mono';
+}
+
+#toshiLogo {
+    display : block;
+    position : relative;
+    margin-left : auto;
+    margin-right : auto; 
+    margin-top : 65px;
+
+}
+
+#occupation {
+    display : block;
+    position : relative;
+    margin-left : auto;
+    margin-right : auto; 
+    margin-top : 5px;
 }
 
 
@@ -186,11 +217,12 @@ nav {
 .bandOrange {
     width: 100%;
     display: inline-block;
+    position: fixed;
     margin: 0 auto ;
-    background-color: #f7b321;
-    position: relative;
-    border-bottom: 1px solid #a6a4a0;
+    background-color: black;
+    position: relative; 
     -webkit-transform: translate3d(0,0,0);
+    text-align : center;
 }
 
 .bandOrangeContact {
@@ -218,6 +250,23 @@ nav {
     text-align: center;
     border: none;
     
+}
+
+#more {
+    border : 1px solid white;
+    width : 100px;
+    height : 30px;
+    
+    display : block;
+    position : relative;
+    margin-left : auto;
+    margin-right : auto; 
+}
+
+#moreLink {
+    line-height : 30px;
+    vertical-align: middle;
+    margin-top : 0px;
 }
 
 /*MAIN*/
@@ -296,7 +345,7 @@ nav {
 }
 
 #container4 {
-    max-width: 1000px;
+    max-width: 1400px;
     height: 100%;
     margin: 0 auto;
     border: none;
@@ -317,7 +366,7 @@ nav {
     height: 100%;
     margin: 0 0px 0 -0px;
     padding-left : -1px;
-    background-color: #494745;
+    background-color: black;
     overflow: hidden;
     text-align: center; 
     display : block;
@@ -325,7 +374,9 @@ nav {
 
 #folio_section {
     padding-top : 20px;
-    height : 55px; 
+    height : 40px;
+    margin-left : 85px; 
+    margin-top : 7px;
 }
 
 .wrapper {
@@ -378,7 +429,7 @@ li {
 }
 
 h1 {
-    margin-top: 22px;
+    margin-top: 5px;
     font-family: 'Share Tech Mono', arial, sans-serif;
     font-size: 2.5em;
 }
@@ -404,9 +455,9 @@ h4 {
 
 hr {
     width: 100%;
-    background:#f7b321;
+    background: white;
     border: 0;
-    height: 1px;
+    height: 2px;
 }
 
 p { 
@@ -441,22 +492,26 @@ p {
 
 .tag {
     padding: 5px 5px 5px 5px;
-    background: rgba(56,31,26,10);
+    background: black;
     display: inline-block;
-    border: #fceecb 2px solid;
+    border: white 2px solid;
     border-radius: 7px;
     margin: 5px 5px 0 0;
     color: white;
 }
 
+#tagHeader {
+    color : white;
+}
+
 .tagWhite {
-    background: rgba(56,31,26,10);
+    background: black;
+    border : 1px solid white;
     padding: 0px 10px 0px 10px;
-    border-radius: 12px;
+    border-radius: 8px;
     color: white;
     margin: 0px 0px 0px 20px;
-    white-space: nowrap;
-    float : left;  
+    white-space: nowrap;  
 }
 
 #tagWindow {
@@ -529,7 +584,7 @@ textarea {
     display: inline-block;
     width: 240px;
     min-height: 460px;
-    background-color: #494745;
+    background-color: black;
     vertical-align: top;    
 }
 
@@ -544,7 +599,7 @@ textarea {
 }
 
 .folioDescription20 {
-    background-color: #494745;
+    background-color: black;
     padding: 10px 2px 10px 2px;
     overflow: hidden;
     margin: 0px auto;
@@ -554,20 +609,21 @@ textarea {
 
 .folioTitle {
     padding-top: 5px;
-    background-color: #494745;
+    background-color: black;
     font-family: 'Share Tech Mono', arial, sans-serif;
     font-size: 2em;
 
 }
 
 .folioTag {
-    background-color: #f7b321;
+    background-color: black;
+    border : 1px solid white;
     padding: 5px 10px 5px 10px;
     border-radius: 6px;
     color: white;
     margin: 0px auto;
     white-space: nowrap;
-    width: 50%; 
+    width: 30%; 
     margin-bottom : 20px;
 }
 
@@ -606,10 +662,7 @@ input, select, textarea {
         position : relative; 
         max-width : 1000px;
     }
-
-    .containverNav {
-        border : ;
-    }
+ 
 
     .containerMain p { 
         font-family : Roboto;
@@ -766,7 +819,7 @@ input, select, textarea {
     color:white;
 }
 .icon-github, .icon-envelope-o, .icon-phone {
-   color: rgba(56,31,26,10);   
+   color: black;   
 }
 
  

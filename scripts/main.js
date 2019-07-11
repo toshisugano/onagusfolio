@@ -19,7 +19,7 @@ function flickrAPI(url){
         //Create a container for the image and then append to folio
         var img_box = $("<div></div>", {"class": "folioImage20"}).appendTo(folio);
         //Create an image tag and append to each img_box
-        $("<img/>").attr("src", img_src).appendTo(img_box).wrap("<a href='" + a_href + "'' target=\"'_blank'\" ></a>"); 
+        $("<img/>").attr("src", img_src).appendTo(img_box); 
             //Create a variable that looks up each individual photo and stores the description from each photo 
             var getPhotoInfo = "https://api.flickr.com/services/rest/?format=json&method=flickr.photos.getInfo&photo_id=" + photo.id + "&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
             //Create a function that parses the info
@@ -29,7 +29,7 @@ function flickrAPI(url){
                     //create a div that stores each title for each photo
                     $("<div/>", {"class": "folioTitle", "text": title }).appendTo(folio);
                      //Create a horizontal orange line
-                    $("<hr></hr>", {"background": "#f7b321", "border": "0", "height": "3px", "width": "90%"}).appendTo(folio);
+                    $("<hr></hr>", {"background": "black", "border": "0", "height": "5px", "width": "90%"}).appendTo(folio);
                 });
                
 
