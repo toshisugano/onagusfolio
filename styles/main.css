@@ -36,7 +36,7 @@ body {
     position: fixed; 
     z-index : 50;
     display : block;
-    border-bottom: 37px solid #494745; 
+    border-bottom: 0px solid #494745; 
  }
 
 nav a {
@@ -141,9 +141,19 @@ nav {
     font-size : 1rem;
 }
 
-#logo {
-    margin-left : 20px;
+#tlogo {
+    height : 35px;
+    margin-left : 10px;
+    margin-top : 10px;
+    float : left;
+}
 
+#logo {
+    margin-left : 10px;
+    float : left;
+    position : relative;
+    display : inline-block;
+    padding-top : 4px;
 }
 
 #menu {
@@ -264,10 +274,48 @@ nav {
 }
 
 #moreLink {
+    display : inline-block;
+    position : relative;
     line-height : 30px;
     vertical-align: middle;
     margin-top : 0px;
+    float : left;
+    color : white;
+    font-size : 1.5rem;
+    margin-left : 12px;
 }
+
+#downarrow {
+    display : inline-block;
+    position : relative;
+    float : left;
+    margin-top : 5px;
+    width : 25px;
+}
+
+#symbolContainer {
+    width : 100%;
+    background-color : white;
+}
+
+.symbol {
+    margin-top : 25px;
+    margin-bottom : 25px;
+    box-sizing : border-box;
+    text-align : center; 
+    width : 50%; 
+    float : left; 
+    display : inline-block;
+}
+
+.symbol img {
+    width : 150px;
+}
+
+#designdevelopdeploy {
+    width : 100%;
+}
+
 
 /*MAIN*/
 .container1 {
@@ -312,6 +360,7 @@ nav {
 .container2 {
     max-width: 1000px;
     margin: 0 auto; 
+    padding-top : 25px;
     position: relative;
     background-color: #494745;
 }
@@ -558,7 +607,7 @@ textarea {
 .footerBase {
     max-width: 990px;
     min-height: 50px;
-    background-color: #39201b;
+    background-color: black;
     margin: -15px auto 0px auto;
     margin-bottom : -16px;
     text-align: top;
