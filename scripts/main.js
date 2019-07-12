@@ -3,7 +3,7 @@ $('.containerMain').css({"width" : winWidth});
 var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157645079323413&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157691750682445&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
-
+var toggle = 0;
 
 function flickrAPI(url){
     //create a var that makes a call to the flickr API
@@ -110,7 +110,24 @@ var offsetTop = offset.top + verticalOffset;
 $('html, body').animate({scrollTop: offsetTop}, time);
 
 }
-  
+
+function toggleMoreLess(){
+    switch(toggle) {
+      case 0:
+        $('#moreLink').text("Less");
+        toggle++;
+        $('#bio').animate({height: '400px'}, "slow");
+        break;
+      case 1:
+        $('#moreLink').text("More");
+        toggle--;
+        $('#bio').animate({height: '0px'}, "slow");
+        break; 
+    } 
+ 
+    
+}
+
 $('#contact-button').on('click touchstart',function(e){
     e.preventDefault();
     var contactOBJ = {};
@@ -139,26 +156,31 @@ $('#contact-button').on('click touchstart',function(e){
 $(document).ready(function() {
 /* scroll to #containerX */ 
 
-$('#buttonAll').on('click', function(e){
-    e.preventDefault();
-    $('.folioCenter').empty();
-    flickrAPI (allUrl);
-});
+    $('#buttonAll').on('click', function(e){
+        e.preventDefault();
+        $('.folioCenter').empty();
+        flickrAPI (allUrl);
+    });
 
-$('#buttonJS').on('click', function(e){
-    e.preventDefault();
-    $('.folioCenter').empty();
-    flickrAPI(jsUrl);
-});
+    $('#buttonJS').on('click', function(e){
+        e.preventDefault();
+        $('.folioCenter').empty();
+        flickrAPI(jsUrl);
+    });
 
-$('#buttonVisual').on('click', function(e){
-    e.preventDefault(); 
-    $('.folioCenter').empty();
-    flickrAPI(visualUrl); 
-});
+    $('#buttonVisual').on('click', function(e){
+        e.preventDefault(); 
+        $('.folioCenter').empty();
+        flickrAPI(visualUrl); 
+    });
 
-flickrAPI(allUrl);
-socialMediaList(); 
+    $('#moreLink').on('click', function(e){
+        e.preventDefault();  
+        toggleMoreLess();
+    });
+
+    flickrAPI(allUrl);
+    socialMediaList(); 
  
 }); 
 
