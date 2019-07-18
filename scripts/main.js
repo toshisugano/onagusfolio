@@ -50,6 +50,10 @@ function flickrAPI(url){
                         a_href = 'http://' + 'tvapocalypse.herokuapp.com';
                     }
 
+                    if (tagString === 'www.onagusfolio.herokuapp.com/projects/leechesposter'){
+                        a_href = 'http://' + 'onagusfolio.herokuapp.com/projects/leechesposter';
+                    }
+
                     if (testregex == true) { 
                         //Create a JQuery div whose class is folioTag
                         var folioFooter = $("<div></div>", {"class": "folioTag"}).appendTo(folio);
