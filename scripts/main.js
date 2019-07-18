@@ -173,7 +173,7 @@ $(document).ready(function() {
         $('#logoContainer').empty();
         $('#symbolContainer').empty();
         $('#deviconContainer').html('<div class="icon">' +
-                                        '<img id="devicon" src="images/devicon.jpg"/>' +
+                                        '<img id="devicon" src="images/developericon.jpg"/>' +
                                         '<h1>| Development Projects |</h1>' +
                                         '</div>');    
         $('#container4').html('<div class="folioWrapper">' + 
