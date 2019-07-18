@@ -5,8 +5,9 @@ var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.pho
 var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var toggle = 0;
 
-function flickrAPI(url){
+function flickrAPI(url, id){
     //create a var that makes a call to the flickr API
+    var div = "." + id; 
     var getIMG = url;//pass the getIMG var through the getJSON function
     $.getJSON(getIMG, function(data){
         //Loop through each of the photos
@@ -15,7 +16,7 @@ function flickrAPI(url){
         var img_src = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_" + "c.jpg";
         //Create a variable that creates an href tag for each photo returned
         var a_href = "http://www.flickr.com/photos/" + data.photoset.owner + "/" + photo.id + "/";  
-        var folio = $("<div></div>", {"class": "folioDiv20"}).appendTo(".folioCenter");
+        var folio = $("<div></div>", {"class": "folioDiv20"}).appendTo(div);
         //Create a container for the image and then append to folio
         var img_box = $("<div></div>", {"class": "folioImage20"}).appendTo(folio);
         //Create an image tag and append to each img_box
@@ -161,30 +162,58 @@ $(document).ready(function() {
 /* scroll to #containerX */ 
 
     $('#buttonAll').on('click', function(e){
-        e.preventDefault();
-        $('.folioCenter').empty();
-        flickrAPI (allUrl);
+        e.preventDefault(); 
+        location.reload(); 
+        window.scrollTo(0, 0); 
     });
 
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
-        $('.folioCenter').empty();
-        flickrAPI(jsUrl);
+        $('#desiconContainer').empty();
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        $('#deviconContainer').html('<div class="icon">' +
+                                        '<img id="devicon" src="images/devicon.jpg"/>' +
+                                        '<h1>| Development Projects |</h1>' +
+                                        '</div>');    
+        $('#container4').html('<div class="folioWrapper">' + 
+                                '<div class="folioCenter"></div>' +           
+                              '</div>').css("height", "100%");
+        $('#container5').empty();
+        $('#buttonJS').css("pointer-events", "none");
+        $('#buttonVisual').css("pointer-events", "auto");
+        flickrAPI(jsUrl, 'folioCenter');
+        window.scrollTo(0, 0); 
     });
 
     $('#buttonVisual').on('click', function(e){
-        e.preventDefault(); 
-        $('.folioCenter').empty();
-        flickrAPI(visualUrl); 
+        e.preventDefault();   
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        $('#deviconContainer').empty();
+        $('#container4').empty();
+        $('#desiconContainer').html('<div class="desicon">' +
+                                        '<img id="desicon" src="images/designicon.jpg"/>' +
+                                        '<h1>| Design Projects |</h1>'+
+                                        '</div> '
+                                        ); 
+        $('#container5').html(' <div class="folioWrapper">' + 
+                                 '<div class="desfolioCenter"></div>' +          
+                              '</div>').css("height", "100%");
+        $('#buttonJS').css("pointer-events", "auto");
+        $('#buttonVisual').css("pointer-events", "none");
+        flickrAPI(visualUrl, 'desfolioCenter'); 
+        window.scrollTo(0, 0); 
     });
 
     $('#moreLink').on('click', function(e){
         e.preventDefault();  
         toggleMoreLess();
-    });
+    }); 
 
-    flickrAPI(allUrl);
     socialMediaList(); 
+    $('#container4').empty();
+    $('#container5').empty();
  
 }); 
 
