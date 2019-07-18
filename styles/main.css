@@ -399,7 +399,8 @@ nav {
 }
 
 #container4 {
-    max-width: 1400px;
+    width : 100%;
+    max-width: 1400px; 
     height: 100%;
     margin: 0 auto;
     border: none;
