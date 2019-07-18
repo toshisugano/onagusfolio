@@ -643,6 +643,10 @@ textarea {
     vertical-align: top;    
 }
 
+.folioImg {
+    width : 100%;
+}
+
 
 .folioImage20 {
     width: 100%;
