@@ -708,8 +708,7 @@ textarea {
 
 
 .folioImage20 {
-    width: 100%;
-    padding : 20px 10px 10px 20px;
+    width: 100%; 
 }
 
 .folioImage20 img{ 
@@ -840,13 +839,13 @@ input, select, textarea {
     .folioDescription20 {  
         color : white;
         margin-bottom : 10px;
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.5em;
         color : white;
     }
 
     .folioTitle {  
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 2em;
         color : white;
     }
@@ -857,7 +856,7 @@ input, select, textarea {
     }
 
     .folioTag a{
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 2em;
         color : white;
     }
