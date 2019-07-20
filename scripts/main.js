@@ -303,8 +303,7 @@ $(document).ready(function() {
                               '</div>').css("height", "100%");
         $('#buttonJS').css("pointer-events", "auto");
         $('#buttonVisual').css("pointer-events", "none");
-        flickrAPI(visualUrl, 'desfolioCenter'); 
-        alert(devHeight);
+        flickrAPI(visualUrl, 'desfolioCenter');  
         window.scrollTo(0, devHeight+35); 
     });
 
