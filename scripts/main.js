@@ -203,9 +203,9 @@ $(document).ready(function() {
     }
 
     if(currURL.slice((length-6), (length)) == 'design'){
-        $('#logoContainer').empty();
         $('#symbolContainer').empty();
         $('#deviconContainer').empty();
+        $('#logoContainer').empty(); 
         $('#container4').empty();
 
         setTimeout(function(){  
