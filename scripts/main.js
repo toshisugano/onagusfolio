@@ -182,6 +182,7 @@ $(document).ready(function() {
         $('#logoContainer').empty();
         $('#symbolContainer').empty();
         $('#desiconContainer').empty();
+        $('#container5').empty();
 
         setTimeout(function(){ 
             $('#deviconContainer').html('<div class="icon">' +
@@ -191,7 +192,7 @@ $(document).ready(function() {
             $('#container4').html('<div class="folioWrapper">' + 
                                     '<div class="folioCenter"></div>' +           
                                   '</div>').css("height", "100%");
-            $('#container5').empty();
+            
             $('#buttonJS').css("pointer-events", "none");
             $('#buttonVisual').css("pointer-events", "auto");
             flickrAPI(jsUrl, 'folioCenter');
@@ -205,12 +206,10 @@ $(document).ready(function() {
         $('#logoContainer').empty();
         $('#symbolContainer').empty();
         $('#deviconContainer').empty();
+        $('#container4').empty();
 
-        setTimeout(function(){ 
-            $('#logoContainer').empty();
-            $('#symbolContainer').empty();
-            $('#deviconContainer').empty();
-            $('#container4').empty();
+        setTimeout(function(){  
+           
             $('#desiconContainer').html('<div class="desicon">' +
                                             '<img id="desicon" src="images/designicon.jpg"/>' +
                                             '<h1 id="desH1">| Design Projects |</h1>'+
