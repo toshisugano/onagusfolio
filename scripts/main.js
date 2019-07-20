@@ -1,7 +1,6 @@
 
-var currURL = window.location.href;
-var url = "designertoshi.com/design";
-var length = url.length; 
+var currURL = window.location.href; 
+var length = currURL.length; 
 var winWidth = $(window).width();
 $('.containerMain').css({"width" : winWidth}); 
 var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157645079323413&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
@@ -182,7 +181,7 @@ $('#contact-button').on('click touchstart',function(e){
 $(document).ready(function() {
 
       
-    if(url.slice((length-7), (length)) == 'develop'){
+    if(currURL.slice((length-7), (length)) == 'develop'){
         renderDevPage();
     }
 
@@ -191,14 +190,12 @@ $(document).ready(function() {
     });
 
     $('#devH1, #desH1').on('mouseover', function(e){ 
-        $(this).animate({fontSize: "2.75rem" }, 1000 ).then(function(){
-            alert("Done");
-        });
+        $(this).animate({fontSize: "2.75rem" }, 1000 );
     }); 
 
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
-        
+        renderDevPage();
     });
 
     $('#devicon, #devH1').on('click', function(e){
