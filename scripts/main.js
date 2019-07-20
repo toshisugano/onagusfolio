@@ -244,7 +244,7 @@ $(document).ready(function() {
 
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
-        window.location.href = currURL + 'develop';
+        window.location.href = 'http://www.designertoshi.com/develop';
     });
 
     $('#devicon, #devH1').on('click', function(e){
@@ -284,6 +284,8 @@ $(document).ready(function() {
         $('#buttonVisual').css("pointer-events", "none");
         flickrAPI(visualUrl, 'desfolioCenter'); 
         window.scrollTo(0, 0); 
+        window.location.href = 'http://www.designertoshi.com/design';
+
     });
 
     $('#desicon, #desH1').on('click', function(e){

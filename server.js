@@ -23,6 +23,10 @@ app.get('/develop' , function(req, res ){
     res.sendFile(__dirname + '/home.html');
 }); 
 
+app.get('/design' , function(req, res ){ 
+    res.sendFile(__dirname + '/home.html');
+}); 
+
 console.log("running");
 
 app.listen(port);

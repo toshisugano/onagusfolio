@@ -143,7 +143,7 @@ $(document).ready(function() {
 $('#buttonAll').on('click', function(e){
     e.preventDefault();
     $('.folioCenter').empty();
-    window.location = 'http://www.designertoshi.com/develop';
+    window.location = 'http://www.designertoshi.com/design';
     flickrAPI (allUrl);
 });
  
