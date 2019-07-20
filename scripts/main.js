@@ -1,4 +1,5 @@
 
+
 var currURL = window.location.href; 
 var length = currURL.length; 
 var winWidth = $(window).width();
@@ -7,6 +8,7 @@ var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.ph
 var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157691750682445&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var toggle = 0;
+ 
 
 function flickrAPI(url, id){
     //create a var that makes a call to the flickr API
@@ -118,21 +120,17 @@ $('html, body').animate({scrollTop: offsetTop}, time);
 
 }
 
-function renderDevPage(){
-        $('#desiconContainer').empty();
-        $('#logoContainer').empty();
-        $('#symbolContainer').empty();
-        $('#deviconContainer').html('<div class="icon">' +
-                                        '<img id="devicon" src="images/developericon.jpg"/>' +
-                                        '<h1 id="devH1">| Development Projects |</h1>' +
-                                        '</div>');    
-        $('#container4').html('<div class="folioWrapper">' + 
-                                '<div class="folioCenter"></div>' +           
-                              '</div>').css("height", "100%");
-        $('#container5').empty();
-        $('#buttonJS').css("pointer-events", "none");
-        $('#buttonVisual').css("pointer-events", "auto"); 
-        window.scrollTo(0, 0); 
+function renderDevPage(){ 
+    devPagePromise = new Promise(function(resolve, reject) {
+      //setInterval(() => {
+        //Check dom to see if folioCenter exists
+       // console.log($('.folioCenter'));
+        //if exists, then resolve
+        //resolve('Promise is created and consumed');
+     // }, 1000);
+    //
+    }
+    );
 }
 
 function toggleMoreLess(){
@@ -180,10 +178,61 @@ $('#contact-button').on('click touchstart',function(e){
 $(document).ready(function() {
 
       
-    /*if(currURL.slice((length-7), (length)) == 'develop'){
-        renderDevPage();
-        flickrAPI(jsUrl, 'folioCenter');
-    }*/
+    if(currURL.slice((length-7), (length)) == 'develop'){
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        $('#desiconContainer').empty();
+
+        setTimeout(function(){ 
+            $('#deviconContainer').html('<div class="icon">' +
+                                            '<img id="devicon" src="images/developericon.jpg"/>' +
+                                            '<h1 id="devH1">| Development Projects |</h1>' +
+                                            '</div>');    
+            $('#container4').html('<div class="folioWrapper">' + 
+                                    '<div class="folioCenter"></div>' +           
+                                  '</div>').css("height", "100%");
+            $('#container5').empty();
+            $('#buttonJS').css("pointer-events", "none");
+            $('#buttonVisual').css("pointer-events", "auto");
+            flickrAPI(jsUrl, 'folioCenter');
+            window.scrollTo(0, 0); 
+
+        }, 100);
+        
+    }
+
+    if(currURL.slice((length-6), (length)) == 'design'){
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        $('#desiconContainer').empty();
+
+        setTimeout(function(){ 
+            $('#logoContainer').empty();
+            $('#symbolContainer').empty();
+            $('#deviconContainer').empty();
+            $('#container4').empty();
+            $('#desiconContainer').html('<div class="desicon">' +
+                                            '<img id="desicon" src="images/designicon.jpg"/>' +
+                                            '<h1 id="desH1">| Design Projects |</h1>'+
+                                            '</div> '
+                                            ); 
+            $('#container5').html(' <div class="folioWrapper">' + 
+                                     '<div class="desfolioCenter"></div>' +          
+                                  '</div>').css("height", "100%");
+            $('#buttonJS').css("pointer-events", "auto");
+            $('#buttonVisual').css("pointer-events", "none");
+            flickrAPI(visualUrl, 'desfolioCenter'); 
+            window.scrollTo(0, 0); 
+        }, 100);
+        
+    }
+
+
+
+    $('#buttonAll').on('click', function(e){
+        e.preventDefault();
+        window.location.href = 'http://www.designertoshi.com';
+    });
 
     $('#devH1, #desH1').on('click', function(e){ 
         e.preventDefault();  
@@ -195,8 +244,7 @@ $(document).ready(function() {
 
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
-        renderDevPage();
-        flickrAPI(jsUrl, 'folioCenter');
+        window.location.href = currURL + 'develop';
     });
 
     $('#devicon, #devH1').on('click', function(e){
