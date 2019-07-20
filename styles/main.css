@@ -454,6 +454,16 @@ nav {
     height: 100%;
 }
 
+#container3 {
+    width : 100%;
+    max-width: 1400px; 
+    height: 0px;
+    margin: 0 auto;
+    border: none;
+    background-color: black;
+    position: relative;
+}
+
 #container4 {
     width : 100%;
     max-width: 1400px; 

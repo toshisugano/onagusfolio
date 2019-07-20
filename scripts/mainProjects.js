@@ -143,15 +143,26 @@ $(document).ready(function() {
 $('#buttonAll').on('click', function(e){
     e.preventDefault();
     $('.folioCenter').empty();
-    window.location = 'http://www.designertoshi.com'
+    window.location = 'http://www.designertoshi.com';
     flickrAPI (allUrl);
 });
 
 $('#buttonJS').on('click', function(e){
-    e.preventDefault();
-    $('.folioCenter').empty();
-    flickrAPI(jsUrl);
-});
+        e.preventDefault(); 
+        $('#container3').empty();
+        $('#deviconContainer').html('<div class="icon">' +
+                                        '<img id="devicon" src="images/developericon.jpg"/>' +
+                                        '<h1 id="devH1">| Development Projects |</h1>' +
+                                        '</div>');    
+        $('#container4').html('<div class="folioWrapper">' + 
+                                '<div class="folioCenter"></div>' +           
+                              '</div>').css("height", "100%");
+        $('#container5').empty();
+        $('#buttonJS').css("pointer-events", "none");
+        $('#buttonVisual').css("pointer-events", "auto");
+        flickrAPI(jsUrl, 'folioCenter');
+        window.scrollTo(0, 0); 
+    });
 
 $('#buttonVisual').on('click', function(e){
     e.preventDefault(); 
