@@ -131,8 +131,7 @@ function renderDevPage(){
                               '</div>').css("height", "100%");
         $('#container5').empty();
         $('#buttonJS').css("pointer-events", "none");
-        $('#buttonVisual').css("pointer-events", "auto");
-        flickrAPI(jsUrl, 'folioCenter');
+        $('#buttonVisual').css("pointer-events", "auto"); 
         window.scrollTo(0, 0); 
 }
 
@@ -181,9 +180,10 @@ $('#contact-button').on('click touchstart',function(e){
 $(document).ready(function() {
 
       
-    if(currURL.slice((length-7), (length)) == 'develop'){
+    /*if(currURL.slice((length-7), (length)) == 'develop'){
         renderDevPage();
-    }
+        flickrAPI(jsUrl, 'folioCenter');
+    }*/
 
     $('#devH1, #desH1').on('click', function(e){ 
         e.preventDefault();  
@@ -196,6 +196,7 @@ $(document).ready(function() {
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
         renderDevPage();
+        flickrAPI(jsUrl, 'folioCenter');
     });
 
     $('#devicon, #devH1').on('click', function(e){
