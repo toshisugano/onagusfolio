@@ -149,7 +149,7 @@ $('#buttonAll').on('click', function(e){
 
 $('#buttonJS').on('click', function(e){
         e.preventDefault(); 
-        $('#container3').empty();
+        $('#container1').empty();
         $('#deviconContainer').html('<div class="icon">' +
                                         '<img id="devicon" src="images/developericon.jpg"/>' +
                                         '<h1 id="devH1">| Development Projects |</h1>' +
@@ -157,7 +157,53 @@ $('#buttonJS').on('click', function(e){
         $('#container4').html('<div class="folioWrapper">' + 
                                 '<div class="folioCenter"></div>' +           
                               '</div>').css("height", "100%");
-        $('#container5').empty();
+        $('#container2').html('<div class="wrapper">' +
+                '<img id="designdevelopdeploy" src="images/designdevelopdeploy.jpg"/>' +     
+                '<h3 id="tagHeader">My Technical Skills</h3>' + 
+                '<hr style="background:white; border:0; height:1px" />' +
+                '<p class="tag">React.js</p>' + 
+                '<p class="tag">Redux</p>' +
+                '<p class="tag">Node.js</p>' + 
+                '<p class="tag">CSS/SASS</p>' +
+                '<p class="tag">Babel</p>' +
+                '<p class="tag">Webpack</p>' +
+                '<p class="tag">MongoDB</p>' +
+                '<p class="tag">Javascript-ES6</p>' +
+                '<p class="tag">Jquery</p>' +
+                '<p class="tag">Gulp.js</p>' +
+                '<p class="tag">Backbone.js</p>' +
+                '<p class="tag">Underscore.js</p>' +
+                '<p class="tag">Lodash</p>' +
+                '<h3 id="tagHeader">My Creative Skills</h3>' +
+                '<hr style="background:white; border:0; height:1px" />' +
+                '<p class="tag">UI Design</p>' +
+                '<p class="tag">Graphic Design</p>' +
+                '<p class="tag">Illustration</p>' +   
+                '<p class="tag">Photography</p>' +
+                '<p class="tag">Video Animation</p>');
+        $('#container3').html('<ul>'+  
+                    '<li class="social">' +    
+                        '<a href="http://github.com/toshisugano" target="blank" class="fa-stack fa-2x icon-github ">' +
+                          '<i class="fa fa-square fa-stack-2x"></i>' +
+                          '<i class="fa fa-github fa-stack-1x"></i>' +
+                        '</a>' +
+                        '<p class="links">@ Github</p>' + 
+                    '</li>' +  
+                    '<li class="social">' +
+                        '<a href="mailto:onagususa@gmail.com" class="fa-stack fa-2x icon-envelope-o">' + 
+                          '<i class="fa fa-square fa-stack-2x"></i>' +
+                          '<i class="fa fa-envelope-o fa-stack-1x"></i>' + 
+                        '</a>' +
+                          '<p class="links">onagususa@gmail.com</p>' +
+                    '</li>' +
+                    '<li class="social">' + 
+                        '<a href="tel:+1-770-568-1348" class="fa-stack fa-2x icon-phone">' +
+                          '<i class="fa fa-square fa-stack-2x"></i>' +
+                          '<i class="fa fa-phone fa-stack-1x"></i>' +
+                        '</a>' + 
+                        '<p class="links">#Cell </p>' +    
+                    '</li>' +
+                '</ul>');
         $('#buttonJS').css("pointer-events", "none");
         $('#buttonVisual').css("pointer-events", "auto");
         flickrAPI(jsUrl, 'folioCenter');
