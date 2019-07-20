@@ -223,7 +223,7 @@ $(document).ready(function() {
             $('#buttonVisual').css("pointer-events", "none");
             flickrAPI(visualUrl, 'desfolioCenter'); 
             window.scrollTo(0, 0); 
-        }, 100);
+        }, 10);
         
     }
 
