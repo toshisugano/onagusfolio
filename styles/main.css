@@ -325,6 +325,7 @@ nav {
 #devicon {
     height : 125px;
     width : 125px;
+    cursor : pointer;
 }
 
 .icon {
@@ -336,8 +337,14 @@ nav {
     display : inline-block;
 }
 
-.icon h1 {
+#devH1 {
+    cursor : pointer;
     color : black;
+}
+
+#desH1 {
+    cursor : pointer;
+    color : white;
 }
 
 .desicon {

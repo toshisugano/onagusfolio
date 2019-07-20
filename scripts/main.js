@@ -159,7 +159,16 @@ $('#contact-button').on('click touchstart',function(e){
 
 
 $(document).ready(function() {
-/* scroll to #containerX */ 
+
+    $('#devH1, #desH1').on('click', function(e){ 
+        e.preventDefault();  
+    });
+
+    $('#devH1, #desH1').on('mouseover', function(e){ 
+        $(this).animate({fontSize: "2.75rem" }, 1000 ).then(function(){
+            alert("Done");
+        });
+    });
 
     $('#buttonAll').on('click', function(e){
         e.preventDefault(); 
@@ -174,12 +183,31 @@ $(document).ready(function() {
         $('#symbolContainer').empty();
         $('#deviconContainer').html('<div class="icon">' +
                                         '<img id="devicon" src="images/developericon.jpg"/>' +
-                                        '<h1>| Development Projects |</h1>' +
+                                        '<h1 id="devH1">| Development Projects |</h1>' +
                                         '</div>');    
         $('#container4').html('<div class="folioWrapper">' + 
                                 '<div class="folioCenter"></div>' +           
                               '</div>').css("height", "100%");
         $('#container5').empty();
+        $('#buttonJS').css("pointer-events", "none");
+        $('#buttonVisual').css("pointer-events", "auto");
+        flickrAPI(jsUrl, 'folioCenter');
+        window.scrollTo(0, 0); 
+    });
+
+    $('#devicon, #devH1').on('click', function(e){
+        e.preventDefault();
+        //$('#desiconContainer').empty();
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        $('#deviconContainer').html('<div class="icon">' +
+                                        '<img id="devicon" src="images/developericon.jpg"/>' +
+                                        '<h1 id="devH1">| Development Projects |</h1>' +
+                                        '</div>');    
+        $('#container4').html('<div class="folioWrapper">' + 
+                                '<div class="folioCenter"></div>' +           
+                              '</div>').css("height", "100%");
+        //$('#container5').empty();
         $('#buttonJS').css("pointer-events", "none");
         $('#buttonVisual').css("pointer-events", "auto");
         flickrAPI(jsUrl, 'folioCenter');
@@ -194,7 +222,7 @@ $(document).ready(function() {
         $('#container4').empty();
         $('#desiconContainer').html('<div class="desicon">' +
                                         '<img id="desicon" src="images/designicon.jpg"/>' +
-                                        '<h1>| Design Projects |</h1>'+
+                                        '<h1 id="desH1">| Design Projects |</h1>'+
                                         '</div> '
                                         ); 
         $('#container5').html(' <div class="folioWrapper">' + 
@@ -204,6 +232,27 @@ $(document).ready(function() {
         $('#buttonVisual').css("pointer-events", "none");
         flickrAPI(visualUrl, 'desfolioCenter'); 
         window.scrollTo(0, 0); 
+    });
+
+    $('#desicon, #desH1').on('click', function(e){
+        e.preventDefault();   
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        var devHeight = document.getElementById('deviconContainer').offsetHeight + document.getElementById('container4').offsetHeight;
+        //$('#container4').empty();
+        $('#desiconContainer').html('<div class="desicon">' +
+                                        '<img id="desicon" src="images/designicon.jpg"/>' +
+                                        '<h1 id="desH1">| Design Projects |</h1>'+
+                                        '</div> '
+                                        ); 
+        $('#container5').html(' <div class="folioWrapper">' + 
+                                 '<div class="desfolioCenter"></div>' +          
+                              '</div>').css("height", "100%");
+        $('#buttonJS').css("pointer-events", "auto");
+        $('#buttonVisual').css("pointer-events", "none");
+        flickrAPI(visualUrl, 'desfolioCenter'); 
+        alert(devHeight);
+        window.scrollTo(0, devHeight+35); 
     });
 
     $('#moreLink').on('click', function(e){
