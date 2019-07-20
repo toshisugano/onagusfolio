@@ -61,7 +61,8 @@ function flickrAPI(url, id){
                         //Create a variable called valueLink that creates an href incorporating tagString
                         $('<a/>', {
                             href : a_href,
-                            text : "Open" 
+                            text : "Open",
+                            target : "_blank"
                         }).appendTo(folioFooter);
                         //Wrap valueLink with class tagWhite
                         //Append to folio
