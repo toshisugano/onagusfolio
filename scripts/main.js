@@ -170,11 +170,11 @@ $(document).ready(function() {
         });
     });
 
-    $('#buttonAll').on('click', function(e){
+    /*$('#buttonAll').on('click', function(e){
         e.preventDefault(); 
         location.reload(); 
         window.scrollTo(0, 0); 
-    });
+    });*/
 
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
