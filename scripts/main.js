@@ -204,7 +204,7 @@ $(document).ready(function() {
     if(currURL.slice((length-6), (length)) == 'design'){
         $('#logoContainer').empty();
         $('#symbolContainer').empty();
-        $('#desiconContainer').empty();
+        $('#deviconContainer').empty();
 
         setTimeout(function(){ 
             $('#logoContainer').empty();
