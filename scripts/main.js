@@ -1,3 +1,7 @@
+
+var currURL = window.location.href;
+var url = "designertoshi.com/design";
+var length = url.length; 
 var winWidth = $(window).width();
 $('.containerMain').css({"width" : winWidth}); 
 var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157645079323413&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
@@ -115,6 +119,24 @@ $('html, body').animate({scrollTop: offsetTop}, time);
 
 }
 
+function renderDevPage(){
+        $('#desiconContainer').empty();
+        $('#logoContainer').empty();
+        $('#symbolContainer').empty();
+        $('#deviconContainer').html('<div class="icon">' +
+                                        '<img id="devicon" src="images/developericon.jpg"/>' +
+                                        '<h1 id="devH1">| Development Projects |</h1>' +
+                                        '</div>');    
+        $('#container4').html('<div class="folioWrapper">' + 
+                                '<div class="folioCenter"></div>' +           
+                              '</div>').css("height", "100%");
+        $('#container5').empty();
+        $('#buttonJS').css("pointer-events", "none");
+        $('#buttonVisual').css("pointer-events", "auto");
+        flickrAPI(jsUrl, 'folioCenter');
+        window.scrollTo(0, 0); 
+}
+
 function toggleMoreLess(){
     switch(toggle) {
       case 0:
@@ -159,6 +181,11 @@ $('#contact-button').on('click touchstart',function(e){
 
 $(document).ready(function() {
 
+      
+    if(url.slice((length-7), (length)) == 'develop'){
+        renderDevPage();
+    }
+
     $('#devH1, #desH1').on('click', function(e){ 
         e.preventDefault();  
     });
@@ -167,31 +194,11 @@ $(document).ready(function() {
         $(this).animate({fontSize: "2.75rem" }, 1000 ).then(function(){
             alert("Done");
         });
-    });
-
-    /*$('#buttonAll').on('click', function(e){
-        e.preventDefault(); 
-        location.reload(); 
-        window.scrollTo(0, 0); 
-    });*/
+    }); 
 
     $('#buttonJS').on('click', function(e){
         e.preventDefault();
-        $('#desiconContainer').empty();
-        $('#logoContainer').empty();
-        $('#symbolContainer').empty();
-        $('#deviconContainer').html('<div class="icon">' +
-                                        '<img id="devicon" src="images/developericon.jpg"/>' +
-                                        '<h1 id="devH1">| Development Projects |</h1>' +
-                                        '</div>');    
-        $('#container4').html('<div class="folioWrapper">' + 
-                                '<div class="folioCenter"></div>' +           
-                              '</div>').css("height", "100%");
-        $('#container5').empty();
-        $('#buttonJS').css("pointer-events", "none");
-        $('#buttonVisual').css("pointer-events", "auto");
-        flickrAPI(jsUrl, 'folioCenter');
-        window.scrollTo(0, 0); 
+        
     });
 
     $('#devicon, #devH1').on('click', function(e){
