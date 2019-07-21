@@ -64,7 +64,7 @@ function flickrAPI(url, id){
                     }
 
                     if (testregex == true) { 
-                        alert(targetLink);
+                         
                         //Create a JQuery div whose class is folioTag 
                         var folioFooter = $("<div></div>", {"class": "folioTag"}).appendTo(folio);
                         //Create a variable called valueLink that creates an href incorporating tagString
