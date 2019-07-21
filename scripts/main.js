@@ -8,6 +8,7 @@ var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.ph
 var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157691750682445&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var toggle = 0;
+var targetLink;
  
 
 function flickrAPI(url, id){
@@ -48,8 +49,10 @@ function flickrAPI(url, id){
                     //Create a variable that stores each of the tags
                     var tagString = object.raw; 
                     
-                    var regex = /www/i;
+                    var regex = /www/i;  
                     var testregex = regex.test(tagString);
+                    
+
                     var a_href = 'http://' + tagString;
 
                     if (tagString === 'www.tvapocalypse.herokuapp.com'){
@@ -61,12 +64,14 @@ function flickrAPI(url, id){
                     }
 
                     if (testregex == true) { 
-                        //Create a JQuery div whose class is folioTag
+                        alert(targetLink);
+                        //Create a JQuery div whose class is folioTag 
                         var folioFooter = $("<div></div>", {"class": "folioTag"}).appendTo(folio);
                         //Create a variable called valueLink that creates an href incorporating tagString
                         $('<a/>', {
                             href : a_href,
-                            text : "Open" 
+                            text : "Open",
+                            target : "_blank"
                         }).appendTo(folioFooter);
                         //Wrap valueLink with class tagWhite
                         //Append to folio
