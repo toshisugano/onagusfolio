@@ -6,16 +6,17 @@ var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.ph
 var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157691750682445&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var toggle = 0; 
+var targetLink = ''; 
 
-function flickrAPI(url, id, prop){
+function flickrAPI(url, id, type){
     //create a var that makes a call to the flickr API
-    var targetLink = '';
+    
 
-    if (prop = 'design') {
+    if (type === 'design'){
         targetLink = '_self';
     }
 
-    if (prop) = 'develop' {
+    if (type === 'develop'){
         targetLink = '_blank';
     }
 
@@ -57,7 +58,7 @@ function flickrAPI(url, id, prop){
                     var regex = /www/i;  
                     var testregex = regex.test(tagString);
 
-                    var a_href = 'http://' + tagString;
+                    var a_href = 'http://' + tagString; 
 
                     if (tagString === 'www.tvapocalypse.herokuapp.com'){
                         a_href = 'http://' + 'tvapocalypse.herokuapp.com';
@@ -67,7 +68,7 @@ function flickrAPI(url, id, prop){
                         a_href = 'http://' + 'toshiblog.herokuapp.com';
                     }
 
-                     if (tagString === 'www.lsfilm.herokuapp.com'){
+                    if (tagString === 'www.lsfilm.herokuapp.com'){
                         a_href = 'http://' + 'lsfilm.herokuapp.com';
                     }
 
