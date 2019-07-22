@@ -23,6 +23,11 @@ app.get('/projects/tva' , function(req, res ){
     res.sendFile(__dirname + '/projects/tvapocalypse/index.html');
 }); 
 
+app.get('/projects/sccperformance' , function(req, res ){ 
+    res.sendFile(__dirname + '/projects/sccperformance/index.html');
+}); 
+
+
 app.get('/develop' , function(req, res ){ 
     res.sendFile(__dirname + '/home.html');
 }); 
