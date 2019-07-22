@@ -20,7 +20,7 @@ app.get('/projects/leechesposter' , function(req, res ){
 }); 
 
 app.get('/projects/tva' , function(req, res ){ 
-    res.sendFile(__dirname + '/projects/tva/index.html');
+    res.sendFile(__dirname + '/projects/tvapocalypse/index.html');
 }); 
 
 app.get('/develop' , function(req, res ){ 
