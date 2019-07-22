@@ -59,6 +59,10 @@ function flickrAPI(url, id){
                         a_href = 'http://' + 'tvapocalypse.herokuapp.com';
                     }
 
+                     if (tagString === 'www.lsfilm.herokuapp.com'){
+                        a_href = 'http://' + 'lsfilm.herokuapp.com';
+                    }
+
                     if (tagString === 'www.onagusfolio.herokuapp.com/projects/leechesposter'){
                         a_href = 'http://' + 'onagusfolio.herokuapp.com/projects/leechesposter';
                     }
