@@ -51,7 +51,6 @@ function flickrAPI(url, id){
                     
                     var regex = /www/i;  
                     var testregex = regex.test(tagString);
-                    
 
                     var a_href = 'http://' + tagString;
 
