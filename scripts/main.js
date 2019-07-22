@@ -266,7 +266,7 @@ $(document).ready(function() {
         //$('#container5').empty();
         $('#buttonJS').css("pointer-events", "none");
         $('#buttonVisual').css("pointer-events", "auto");
-        flickrAPI(jsUrl, 'folioCenter');
+        flickrAPI(jsUrl, 'folioCenter', 'develop');
         window.scrollTo(0, 0); 
     });
 
@@ -286,7 +286,7 @@ $(document).ready(function() {
                               '</div>').css("height", "100%");
         $('#buttonJS').css("pointer-events", "auto");
         $('#buttonVisual').css("pointer-events", "none");
-        flickrAPI(visualUrl, 'desfolioCenter'); 
+        flickrAPI(visualUrl, 'desfolioCenter', 'design'); 
         window.scrollTo(0, 0); 
         window.location.href = 'http://www.designertoshi.com/design'; 
     });
