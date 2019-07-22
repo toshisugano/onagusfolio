@@ -1,5 +1,3 @@
-
-
 var currURL = window.location.href; 
 var length = currURL.length; 
 var winWidth = $(window).width();
@@ -7,12 +5,20 @@ $('.containerMain').css({"width" : winWidth});
 var allUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157645079323413&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var jsUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157691750682445&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
 var visualUrl = "https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=72157690113942221&+description+&api_key=814796ef7eee08b0534ae009b71b62aa&jsoncallback=?";
-var toggle = 0;
-var targetLink;
- 
+var toggle = 0; 
 
-function flickrAPI(url, id){
+function flickrAPI(url, id, prop){
     //create a var that makes a call to the flickr API
+    var targetLink = '';
+
+    if (prop == 'design') {
+        targetLink = '_self';
+    }
+
+    if (prop) == 'develop' {
+        targetLink = '_blank';
+    }
+
     var div = "." + id; 
     var getIMG = url;//pass the getIMG var through the getJSON function
     $.getJSON(getIMG, function(data){
@@ -37,8 +43,7 @@ function flickrAPI(url, id){
                     $("<div/>", {"class": "folioTitle", "text": title }).appendTo(folio);
                      //Create a horizontal orange line
                     $("<hr></hr>", {"background": "black", "border": "0", "height": "5px", "width": "90%"}).appendTo(folio);
-                });
-               
+                }); 
 
                 $.each(data.photo.description, function(key, desc){
                     //create a variable that stores each description for each photo
@@ -78,12 +83,11 @@ function flickrAPI(url, id){
                         $('<a/>', {
                             href : a_href,
                             text : "Open",
-                            target : "_blank"
+                            target : targetLink
                         }).appendTo(folioFooter);
                         //Wrap valueLink with class tagWhite
                         //Append to folio
-                        }
-         
+                        } 
                  });
 
             });
@@ -93,9 +97,7 @@ function flickrAPI(url, id){
 
     });//end
 
-}
-
- 
+}  
 
 function socialMediaList() { 
         var socialLinks = {
@@ -105,7 +107,7 @@ function socialMediaList() {
         }; 
         $.each(socialLinks, function(key, value){
             var a_href = ' <a href="' + value + '" target="_blank">';
-            var icons  = '<img class="iconImg"  src="images/'+key+'.gif"/>';
+            var icons  = '<img class="iconImg"  src="images/' + key + '.gif"/>';
             var social = $("<div></div>", {"id": "socialContainer"}).appendTo("#social");
             $(icons).appendTo(social).wrap(a_href);
             console.log(icons); 
@@ -123,13 +125,12 @@ function checkVerticalOffset() {
 } 
 
 function scrollToElement(selector, time, verticalOffset) {
-var time = typeof(time) != 'undefined' ? time : 600;
-var verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-var element = $(selector);
-var offset = element.offset();
-var offsetTop = offset.top + verticalOffset;
-$('html, body').animate({scrollTop: offsetTop}, time);
-
+    var time = typeof(time) != 'undefined' ? time : 600;
+    var verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    var element = $(selector);
+    var offset = element.offset();
+    var offsetTop = offset.top + verticalOffset;
+    $('html, body').animate({scrollTop: offsetTop}, time); 
 }
 
 function renderDevPage(){ 
@@ -157,9 +158,7 @@ function toggleMoreLess(){
         toggle--;
         $('#bio').animate({height: '0px'}, "slow");
         break; 
-    } 
- 
-    
+    }  
 }
 
 $('#contact-button').on('click touchstart',function(e){
@@ -187,8 +186,7 @@ $('#contact-button').on('click touchstart',function(e){
 });
 
 
-$(document).ready(function() {
-
+$(document).ready(function() { 
       
     if(currURL.slice((length-7), (length)) == 'develop'){
         $('#logoContainer').empty();
@@ -207,11 +205,9 @@ $(document).ready(function() {
             
             $('#buttonJS').css("pointer-events", "none");
             $('#buttonVisual').css("pointer-events", "auto");
-            flickrAPI(jsUrl, 'folioCenter');
-            window.scrollTo(0, 0); 
-
-        }, 100);
-        
+            flickrAPI(jsUrl, 'folioCenter', 'develop');
+            window.scrollTo(0, 0);  
+        }, 100); 
     }
 
     if(currURL.slice((length-6), (length)) == 'design'){
@@ -220,8 +216,7 @@ $(document).ready(function() {
         $('#logoContainer').empty(); 
         $('#container4').empty();
 
-        setTimeout(function(){  
-           
+        setTimeout(function(){   
             $('#desiconContainer').html('<div class="desicon">' +
                                             '<img id="desicon" src="images/designicon.jpg"/>' +
                                             '<h1 id="desH1">| Design Projects |</h1>'+
@@ -232,13 +227,10 @@ $(document).ready(function() {
                                   '</div>').css("height", "100%");
             $('#buttonJS').css("pointer-events", "auto");
             $('#buttonVisual').css("pointer-events", "none");
-            flickrAPI(visualUrl, 'desfolioCenter'); 
+            flickrAPI(visualUrl, 'desfolioCenter', 'design'); 
             window.scrollTo(0, 0); 
-        }, 100);
-        
-    }
-
-
+        }, 100); 
+    } 
 
     $('#buttonAll').on('click', function(e){
         e.preventDefault();
@@ -295,8 +287,7 @@ $(document).ready(function() {
         $('#buttonVisual').css("pointer-events", "none");
         flickrAPI(visualUrl, 'desfolioCenter'); 
         window.scrollTo(0, 0); 
-        window.location.href = 'http://www.designertoshi.com/design';
-
+        window.location.href = 'http://www.designertoshi.com/design'; 
     });
 
     $('#desicon, #desH1').on('click', function(e){
@@ -328,12 +319,4 @@ $(document).ready(function() {
     $('#container4').empty();
     $('#container5').empty();
  
-}); 
-
-
- 
-
-
-
-
- 
+});  
