@@ -11,11 +11,11 @@ function flickrAPI(url, id, prop){
     //create a var that makes a call to the flickr API
     var targetLink = '';
 
-    if (prop == 'design') {
+    if (prop = 'design') {
         targetLink = '_self';
     }
 
-    if (prop) == 'develop' {
+    if (prop) = 'develop' {
         targetLink = '_blank';
     }
 
