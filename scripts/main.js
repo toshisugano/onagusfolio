@@ -59,6 +59,10 @@ function flickrAPI(url, id){
                         a_href = 'http://' + 'tvapocalypse.herokuapp.com';
                     }
 
+                    if (tagString === 'www.toshiblog.herokuapp.com'){
+                        a_href = 'http://' + 'toshiblog.herokuapp.com';
+                    }
+
                      if (tagString === 'www.lsfilm.herokuapp.com'){
                         a_href = 'http://' + 'lsfilm.herokuapp.com';
                     }
