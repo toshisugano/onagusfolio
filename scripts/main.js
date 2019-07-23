@@ -9,8 +9,7 @@ var toggle = 0;
 var targetLink = ''; 
 
 function flickrAPI(url, id, type){
-    //create a var that makes a call to the flickr API
-    
+    //create a var that makes a call to the flickr API 
 
     if (type === 'design'){
         targetLink = '_self';
@@ -193,8 +192,13 @@ function closeNavMenu() {
 
 $(document).ready(function() { 
 
-    if (winWidth < 550) {
+    if (winWidth <= 550) {
         $('#folio_section').empty().html('<i id="navBars" class="fas fa-bars fa-2x"></i>');
+        $('#designdevelopdeploy').attr('src', 'images/ddd-small.jpg');  
+    }
+
+    if (winWidth > 550 && winWidth <750) {
+        $('#designdevelopdeploy').attr('src', 'images/ddd-medium.jpg'); 
     }
       
     if(currURL.slice((length-7), (length)) == 'develop'){

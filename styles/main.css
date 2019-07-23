@@ -854,20 +854,20 @@ input, select, textarea {
  
 
     .containerMain p { 
-        font-family : Roboto;
-        font-size : 1.5em;
+        font-family : Share Tech Mono;
+        font-size : 1.75em;
         color : white;
     }
 
     p {
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.5em;
         color : white;
     }
 
     h3 {
         font-family : Share Tech Mono;
-        font-size : 2em;
+        font-size : 1.5em;
         color : grey;
     }
 
@@ -934,13 +934,9 @@ input, select, textarea {
     #navBar {
         display : none;
     }
-
-    #tagHeader {
-        display : none;
-    }
-
-    .tag {
-        display : none;
+    
+    #container2 p{
+        font-size : 1rem;
     }
 
     .social p { 
@@ -951,42 +947,42 @@ input, select, textarea {
 
 @media (min-width: 641px) and (max-width: 780px) {  
     .containerMain p { 
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.75em;
         color : white;
     }
 
     p {
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.75em;
         color : white;
     }
 
     h3 {
-        font-family : Open Sans;
+        font-family : Share Tech Mono;
         font-size : 2em;
         color : grey;
     }
     .folioTag a{
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.75em;
         color : white;
     }
 
     .folioTitle {  
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.75em;
         color : white;
     }
     .folioDescription20 {  
         color : white;
         margin-bottom : 10px;
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.75em;
         color : white;
     }
     .tagWhite a { 
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 1.75em;
         color : white;
         margin-left: 2px;
