@@ -186,8 +186,16 @@ $('#contact-button').on('click touchstart',function(e){
     });
 });
 
+function closeNavMenu() {
+    $('#navMenu').css("display", "none");
+}
+
 
 $(document).ready(function() { 
+
+    if (winWidth < 550) {
+        $('#folio_section').empty().html('<i id="navBars" class="fas fa-bars fa-2x"></i>');
+    }
       
     if(currURL.slice((length-7), (length)) == 'develop'){
         $('#logoContainer').empty();
@@ -315,6 +323,35 @@ $(document).ready(function() {
         e.preventDefault();  
         toggleMoreLess();
     }); 
+
+    $('#navBars').on('click', function(e){
+        e.preventDefault();
+        $('#navMenu').css("display", "block");
+    });
+
+    $('.buttonReset').on('click', function(e){
+        e.preventDefault();
+        closeNavMenu();
+        window.location.href = 'http://www.designertoshi.com';
+    });  
+
+    $('.buttonDesign').on('click', function(e){
+        e.preventDefault();
+        closeNavMenu();
+        window.location.href = 'http://www.designertoshi.com/design';
+    });
+
+    $('.buttonDevelop').on('click', function(e){
+        e.preventDefault();
+        closeNavMenu();
+        window.location.href = 'http://www.designertoshi.com/develop';
+    });
+
+
+    $('#navHeadClose').on('click', function(e){
+        e.preventDefault();
+        closeNavMenu();
+    });
 
     socialMediaList(); 
     $('#container4').empty();
