@@ -206,7 +206,7 @@ $(document).ready(function() {
         setTimeout(function(){ 
             $('#deviconContainer').html('<div class="icon">' +
                                             '<img id="devicon" src="images/developericon.jpg"/>' +
-                                            '<h1 id="devH1">| Development Projects |</h1>' +
+                                            '<h1 id="devH1">Development Projects</h1>' +
                                             '</div>');    
             $('#container4').html('<div class="folioWrapper">' + 
                                     '<div class="folioCenter"></div>' +           
@@ -228,7 +228,7 @@ $(document).ready(function() {
         setTimeout(function(){   
             $('#desiconContainer').html('<div class="desicon">' +
                                             '<img id="desicon" src="images/designicon.jpg"/>' +
-                                            '<h1 id="desH1">| Design Projects |</h1>'+
+                                            '<h1 id="desH1">Design Projects</h1>'+
                                             '</div> '
                                             ); 
             $('#container5').html(' <div class="folioWrapper">' + 
@@ -266,7 +266,7 @@ $(document).ready(function() {
         $('#symbolContainer').empty();
         $('#deviconContainer').html('<div class="icon">' +
                                         '<img id="devicon" src="images/developericon.jpg"/>' +
-                                        '<h1 id="devH1">| Development Projects |</h1>' +
+                                        '<h1 id="devH1">Development Projects</h1>' +
                                         '</div>');    
         $('#container4').html('<div class="folioWrapper">' + 
                                 '<div class="folioCenter"></div>' +           
@@ -286,7 +286,7 @@ $(document).ready(function() {
         $('#container4').empty();
         $('#desiconContainer').html('<div class="desicon">' +
                                         '<img id="desicon" src="images/designicon.jpg"/>' +
-                                        '<h1 id="desH1">| Design Projects |</h1>'+
+                                        '<h1 id="desH1">Design Projects</h1>'+
                                         '</div> '
                                         ); 
         $('#container5').html(' <div class="folioWrapper">' + 
@@ -307,7 +307,7 @@ $(document).ready(function() {
         //$('#container4').empty();
         $('#desiconContainer').html('<div class="desicon">' +
                                         '<img id="desicon" src="images/designicon.jpg"/>' +
-                                        '<h1 id="desH1">| Design Projects |</h1>'+
+                                        '<h1 id="desH1">Design Projects</h1>'+
                                         '</div> '
                                         ); 
         $('#container5').html(' <div class="folioWrapper">' + 

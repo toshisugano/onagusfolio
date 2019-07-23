@@ -65,6 +65,7 @@ nav {
     position : relative;
     float : right;
     margin-right : 29px;
+    margin-top : -8px;
 }
 
 #navMenu {
@@ -845,7 +846,7 @@ input, select, textarea {
     }
 
     h3 {
-        font-family : Roboto;
+        font-family : Share Tech Mono;
         font-size : 2em;
         color : grey;
     }
@@ -854,10 +855,7 @@ input, select, textarea {
         margin-left : -15px;
     }
 
-
-    .bandOrange img {
-        display:  none; 
-    }
+ 
 
     .tagWhite a { 
         font-family : 'Share Tech Mono';
