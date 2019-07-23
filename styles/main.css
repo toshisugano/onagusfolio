@@ -114,7 +114,8 @@ nav {
     position : relative;
     margin-top : -45px;
     margin-left : 60px;
-    font-size : 1.5em;
+    font-size : 1.5em; 
+    font-family : 'share tech mono'
 } 
 
 #socialContainer {
@@ -247,6 +248,7 @@ nav {
     margin-right : auto; 
     margin-top : 65px;
     width : 100%;
+    max-width : 550px;
 }
 
 #occupation {
@@ -482,7 +484,7 @@ nav {
     margin: 0 auto;
     border: none;
     background-color: #494745;
-    position: relative;
+    position: relative;;
 }
 
 .contactWrapper {
@@ -921,6 +923,10 @@ input, select, textarea {
 
     .tag {
         display : none;
+    }
+
+    .social p { 
+        font-family : Share Tech Mono;
     }
 
 }
