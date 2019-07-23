@@ -865,6 +865,10 @@ input, select, textarea {
         color : white;
     }
 
+    h1 {
+        font-size : 1.5rem;
+    }
+
     h3 {
         font-family : Share Tech Mono;
         font-size : 1.5em;
@@ -941,6 +945,7 @@ input, select, textarea {
 
     .social p { 
         font-family : Share Tech Mono;
+        font-size : 1.2rem;
     }
 
 }
