@@ -55,7 +55,9 @@ function flickrAPI(url, id, type){
                     var tagString = object.raw; 
                     
                     var regex = /www/i;  
+                    var regexGit = /git/i;
                     var testregex = regex.test(tagString);
+                    var testGit = regexGit.test(tagString);
 
                     var a_href = 'http://' + tagString; 
 
@@ -87,7 +89,22 @@ function flickrAPI(url, id, type){
                         }).appendTo(folioFooter);
                         //Wrap valueLink with class tagWhite
                         //Append to folio
-                        } 
+                    } 
+
+                    if (testGit == true) {
+
+                        var folioFooter2 = $("<div></div>" , {class: photo.farm, id : "ff2"}).appendTo(folio);
+
+                        var folioGit = $('<a/>', {
+                            class : 'fab fa-github fa-2x',
+                            href : a_href,  
+                            target : targetLink
+                        }).appendTo(folioFooter2);  
+
+                        //$(folioGit).html('<i class="fab fa-github fa-stack-1x"></i>').appendTo(folioGit);
+                        
+                    }
+
                  });
 
             });

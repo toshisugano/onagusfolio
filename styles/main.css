@@ -756,7 +756,8 @@ textarea {
     width: 240px;
     min-height: 460px;
     background-color: black;
-    vertical-align: top;    
+    vertical-align: top;   
+    padding-bottom : 20px; 
 }
 
 .folioImg {
@@ -801,7 +802,7 @@ textarea {
     white-space: nowrap;
     width: 30%; 
     text-align : center;
-    margin-bottom : 20px; 
+    margin-bottom : 10px; 
 }
 
 .folioTag a {
@@ -906,7 +907,11 @@ input, select, textarea {
         position : relative;
         display : inline-block;
         width: 100%; 
-        padding: 0px -1px 0px -1px;
+        padding: 0px -1px 0px 10px;  
+    }
+
+    #ff2 {
+        padding-bottom : 20px;
     }
 
     .folioDescription20 {  
