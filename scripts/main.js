@@ -156,6 +156,7 @@ function toggleMoreLess(){
         $('#moreLink').text("Less");
         toggle++;
         $('#bio').animate({height: '400px'}, "slow").promise().done(function(){
+            $(this).animate({height : '100%'});
             $(this).html(
                 '<div id="biowrapper">' +
                     '<img id="portrait" src="images/toshilinegwd.jpg">' +
@@ -167,8 +168,9 @@ function toggleMoreLess(){
       case 1:
         $('#moreLink').text("More");
         toggle--;
-        $('#bio').empty();
-        $('#bio').animate({height: '0px'}, "slow");
+        $('#bio').animate({height: '0px'}, "slow").promise().done(function(){ 
+            $(this).empty();
+        });
         break; 
     }  
 }

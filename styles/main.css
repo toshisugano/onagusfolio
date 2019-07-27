@@ -310,15 +310,15 @@ nav {
 }
 
 #bio {
-    padding-top : 0px;
-    height : 0px;
+    padding-top : 0px; 
+        height : 0px;
 }
 
 #portrait {
     display : inline-block;
     position : relative;
     width : 250px;  
-    border : 3px solid white;
+    border : 2px solid white;
     margin-top : 30px;
 }
 
@@ -571,7 +571,11 @@ nav {
     background-color: black;
     position: relative; 
     z-index : 1;
+    padding-left : 20px;
+    padding-right : 20px;  
 }
+
+
 
 a { 
     font-family : 'Share Tech Mono';
