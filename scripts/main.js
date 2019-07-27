@@ -148,31 +148,26 @@ function scrollToElement(selector, time, verticalOffset) {
     var offset = element.offset();
     var offsetTop = offset.top + verticalOffset;
     $('html, body').animate({scrollTop: offsetTop}, time); 
-}
-
-function renderDevPage(){ 
-    devPagePromise = new Promise(function(resolve, reject) {
-      //setInterval(() => {
-        //Check dom to see if folioCenter exists
-       // console.log($('.folioCenter'));
-        //if exists, then resolve
-        //resolve('Promise is created and consumed');
-     // }, 1000);
-    //
-    }
-    );
-}
+} 
 
 function toggleMoreLess(){
     switch(toggle) {
       case 0:
         $('#moreLink').text("Less");
         toggle++;
-        $('#bio').animate({height: '400px'}, "slow");
+        $('#bio').animate({height: '400px'}, "slow").promise().done(function(){
+            $(this).html(
+                '<div id="biowrapper">' +
+                    '<img id="portrait" src="images/toshilinegwd.jpg">' +
+                    '<h2>After dealing with a sudden illness and a relapse, Toshi began dabbling with coding and design during his recovery process. After learning the fundamentals, be began focusing on front end, wordpress, UI, node.js, and frameworks like React-Redux. He would like to take on new challenges and help you with your design and coding needs.</h2>' + 
+                '</div>'
+            );
+        });
         break;
       case 1:
         $('#moreLink').text("More");
         toggle--;
+        $('#bio').empty();
         $('#bio').animate({height: '0px'}, "slow");
         break; 
     }  

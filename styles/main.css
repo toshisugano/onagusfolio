@@ -314,6 +314,14 @@ nav {
     height : 0px;
 }
 
+#portrait {
+    display : inline-block;
+    position : relative;
+    width : 250px;  
+    border : 3px solid white;
+    margin-top : 30px;
+}
+
 #more {
     border : 1px solid white;
     width : 100px;
@@ -487,12 +495,12 @@ nav {
 
 /*FOLIO*/
 #container3 {
-    max-width: 1000px;
-    height: 400px;
+    max-width: 1000px; 
     margin: 0 auto;
     border: none;
     background-color: #494745;
-    position: relative;;
+    position: relative;
+    padding-bottom : 50px;
 }
 
 .contactWrapper {
@@ -556,6 +564,15 @@ nav {
     position: relative;   
 }
 
+#biowrapper {
+    max-width: 1000px; 
+    margin: 0 auto;
+    border: none;
+    background-color: black;
+    position: relative; 
+    z-index : 1;
+}
+
 a { 
     font-family : 'Share Tech Mono';
     font-size : 1.5em;
@@ -608,7 +625,7 @@ h1 {
 h2 {
     font-size: 1.5em;
     font-style: none;
-    color: #4c4d47;
+    color: white; 
     font-family:  'Share Tech Mono', arial, sans-serif;
 }
 
