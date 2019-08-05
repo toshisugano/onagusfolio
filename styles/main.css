@@ -430,6 +430,13 @@ nav {
 }
 
 
+#loginContainer {
+    width : 100%;
+    background-color : black;
+    margin-bottom : -35px;
+}
+
+
 /*MAIN*/
 .container1 {
     display: block;
