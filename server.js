@@ -4,7 +4,6 @@ const app = express();
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
     
-
 const keys = require('./config/keys');
 
 /*passport.use(new GoogleStrategy({ 
@@ -15,7 +14,8 @@ const keys = require('./config/keys');
     (accessToken,refreshToken, profile, done ) => {
         console.log(accessToken);
     } 
-));*/
+)
+);*/
 
 const port = process.env.PORT || 8000;  
  
