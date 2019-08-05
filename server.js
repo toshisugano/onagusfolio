@@ -1,8 +1,23 @@
-var express = require('express');   
-  	app = express();
-    router = express.Router();  
+const express = require('express');   
+const app = express();
+      router = express.Router();  
+//const passport = require('passport');
+//const GoogleStrategy = require('passport-google-oauth20').Strategy;
+    
 
-var port = process.env.PORT || 8000;  
+//const keys = require('./config/keys');
+
+/*passport.use(new GoogleStrategy({ 
+    clientID: keys.clientID,
+    clientSecret: keys.secret,
+    callbackURL : ‘/auth/google/callback’
+}, 
+    (accessToken,refreshToken, profile, done ) => {
+        console.log(accessToken);
+    } 
+));*/
+
+const port = process.env.PORT || 8000;  
  
 app.use('/styles', express.static(__dirname + '/styles'));
 app.use('/images', express.static(__dirname + '/images'));
@@ -37,7 +52,7 @@ app.get('/projects/leeches' , function(req, res ){
 }); 
  
 app.get('/develop' , function(req, res ){ 
-    res.sendFile(__dirname + '/home.html');
+    res.sendFile(__dirname + '/dev.html');
 }); 
 
 app.get('/design' , function(req, res ){ 
