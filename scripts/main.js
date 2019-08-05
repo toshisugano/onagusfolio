@@ -55,7 +55,9 @@ function flickrAPI(url, id, type){
                     var tagString = object.raw; 
                     
                     var regex = /www/i;  
+                    var regexGit = /git/i;
                     var testregex = regex.test(tagString);
+                    var testGit = regexGit.test(tagString);
 
                     var a_href = 'http://' + tagString; 
 
@@ -87,7 +89,22 @@ function flickrAPI(url, id, type){
                         }).appendTo(folioFooter);
                         //Wrap valueLink with class tagWhite
                         //Append to folio
-                        } 
+                    } 
+
+                    if (testGit == true) {
+
+                        var folioFooter2 = $("<div></div>" , {class: photo.farm, id : "ff2"}).appendTo(folio);
+
+                        var folioGit = $('<a/>', {
+                            class : 'fab fa-github fa-2x',
+                            href : a_href,  
+                            target : targetLink
+                        }).appendTo(folioFooter2);  
+
+                        //$(folioGit).html('<i class="fab fa-github fa-stack-1x"></i>').appendTo(folioGit);
+                        
+                    }
+
                  });
 
             });
@@ -131,32 +148,29 @@ function scrollToElement(selector, time, verticalOffset) {
     var offset = element.offset();
     var offsetTop = offset.top + verticalOffset;
     $('html, body').animate({scrollTop: offsetTop}, time); 
-}
-
-function renderDevPage(){ 
-    devPagePromise = new Promise(function(resolve, reject) {
-      //setInterval(() => {
-        //Check dom to see if folioCenter exists
-       // console.log($('.folioCenter'));
-        //if exists, then resolve
-        //resolve('Promise is created and consumed');
-     // }, 1000);
-    //
-    }
-    );
-}
+} 
 
 function toggleMoreLess(){
     switch(toggle) {
       case 0:
         $('#moreLink').text("Less");
         toggle++;
-        $('#bio').animate({height: '400px'}, "slow");
+        $('#bio').animate({height: '400px'}, "slow").promise().done(function(){
+            $(this).animate({height : '100%'});
+            $(this).html(
+                '<div id="biowrapper">' +
+                    '<img id="portrait" src="images/toshilinegwd.jpg">' +
+                    '<h2>After dealing with a sudden illness and a relapse, Toshi began dabbling with coding and design during his recovery process. After learning the fundamentals, he began focusing on front end, wordpress, UI, node.js, and frameworks like React-Redux. He would like to take on new challenges and help you with your design and coding needs.</h2>' + 
+                '</div>'
+            );
+        });
         break;
       case 1:
         $('#moreLink').text("More");
         toggle--;
-        $('#bio').animate({height: '0px'}, "slow");
+        $('#bio').animate({height: '0px'}, "slow").promise().done(function(){ 
+            $(this).empty();
+        });
         break; 
     }  
 }
