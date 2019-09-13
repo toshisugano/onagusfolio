@@ -159,7 +159,7 @@ function toggleMoreLess(){
             $(this).html(
                 '<div id="biowrapper">' +
                     '<img id="portrait" src="images/toshi.png">' +
-                    '<h2>Toshi Sugano is a UI Designer and Front End Developer currently specializing in React-Redux development.</h2>' + 
+                    '<h2>...currently focusing on UI Design, Front End Development, and React-Redux.</h2>' + 
                 '</div>'
             );
         });
