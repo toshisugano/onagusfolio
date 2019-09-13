@@ -429,13 +429,35 @@ nav {
     width : 100%;
 }
 
+.form {
+    padding-bottom: 15px;
+}
+
 
 #loginContainer {
     width : 100%;
-    background-color : black;
-    margin-bottom : -35px;
+    background-color : black; 
+    padding-top : 50px;
+    height : 100%;
 }
 
+#loginContainer p {
+    margin-bottom : 0px;
+}
+
+.submitButton {
+    font-family : Share Tech Mono;
+    font-size : 1rem;
+    margin-top : 20px;  
+}
+
+.googleSignIn {
+    margin-bottom : 20px;
+}
+
+.googleLogin {
+    margin-top : 10px;
+}
 
 /*MAIN*/
 .container1 {

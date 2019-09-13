@@ -159,8 +159,8 @@ function toggleMoreLess(){
             $(this).animate({height : '100%'});
             $(this).html(
                 '<div id="biowrapper">' +
-                    '<img id="portrait" src="images/toshilinegwd.jpg">' +
-                    '<h2>After dealing with a sudden illness and a relapse, Toshi began dabbling with coding and design during his recovery process. After learning the fundamentals, he began focusing on front end, wordpress, UI, node.js, and frameworks like React-Redux. He would like to take on new challenges and help you with your design and coding needs.</h2>' + 
+                    '<img id="portrait" src="images/toshi.png">' +
+                    '<h2>Toshi Sugano is a UI Designer and Front End Developer currently specializing in React-Redux development.</h2>' + 
                 '</div>'
             );
         });

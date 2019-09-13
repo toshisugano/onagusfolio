@@ -1,21 +1,17 @@
 const express = require('express');   
 const app = express();
-      router = express.Router();  
+const mongoose = require('mongoose');
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
-    
-const keys = require('./config/keys');
+const cookieSession = require('cookie-session'); 
+const keys = require('./config/keys'); 
 
-/*passport.use(new GoogleStrategy({ 
-    clientID: keys.clientID,
-    clientSecret: keys.secret,
-    callbackURL : ‘/auth/google/callback’
-}, 
-    (accessToken,refreshToken, profile, done ) => {
-        console.log(accessToken);
-    } 
-)
-);*/
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true }, () => {
+    console.log('MongoDB connected');
+});
+
+require('./models/user'); 
+require('./services/passport'); 
+require('./routes/auth')(app);  
 
 const port = process.env.PORT || 8000;  
  
@@ -32,7 +28,6 @@ app.use('/projects/images', express.static(__dirname + '/images'));
 app.get('/' , function(req, res ){ 
     res.sendFile(__dirname + '/home.html');
 });
-
 
 //Projects
 app.get('/projects/leechesposter' , function(req, res ){ 
@@ -53,8 +48,7 @@ app.get('/projects/sccperformancesite' , function(req, res ){
 
 app.get('/projects/leeches' , function(req, res ){ 
     res.sendFile(__dirname + '/projects/leeches/index.html');
-}); 
-
+});  
 
 //Develop 
 app.get('/develop' , function(req, res ){ 
@@ -65,19 +59,6 @@ app.get('/develop' , function(req, res ){
 app.get('/design' , function(req, res ){ 
     res.sendFile(__dirname + '/home.html');
 }); 
-
-//Oauth
-app.get('/auth/google', 
-    passport.authenticate('google', {
-        scope: ['profile', 'email']
-    })
-);
-
-app.get('/auth/google/callback', 
-    passport.authenticate('google', {
-        scope: ['profile', 'email']
-    })
-);
 
 // Login 
 app.get('/login/user', (req, res) => { 

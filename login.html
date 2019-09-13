@@ -39,7 +39,18 @@
         <!--MAIN-->
         <div class="containerMain">  
             <div id="loginContainer" class="bandOrange">
-               
+                    <h1>USER SIGN IN</h1>
+                    <form class="form">
+                        <p>Email : </p><br>
+                        <input type="text" name="email"><br>
+                        <p>Password : </p><br>
+                        <input type="password" name="password"><br>
+                        <input class="submitButton" type="submit" value="Submit">
+                    </form> 
+                    <div class="googleSignIn">
+                        <p>OR Sign in with </p> 
+                        <a href="/auth/google" class="googleLogin"><i class="fab fa-2x fa-google-plus-g"></i></a>
+                    </div>
             </div>  
         </div>  
         <footer class="footerBase">
@@ -65,6 +76,6 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-586f90208a0b3fbc"></script> 
+        
 </body>
 </html>
