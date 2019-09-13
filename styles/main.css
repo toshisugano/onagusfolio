@@ -27,8 +27,7 @@ body {
     margin: 70px auto 0px;
     width : auto!important;
     overflow-x : hidden!important; 
-}
-  
+} 
 
 /*NAVIGATION*/
 .containerNav {
@@ -324,7 +323,8 @@ nav {
 
 #more {
     border : 1px solid white;
-    width : 100px;
+    width : 80px;
+    border-radius : 25px;
     height : 30px;
     display : block;
     position : relative;

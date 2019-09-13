@@ -9,8 +9,7 @@ var toggle = 0;
 var targetLink = ''; 
 
 function flickrAPI(url, id, type){
-    //create a var that makes a call to the flickr API 
-
+    //create a var that makes a call to the flickr API  
     if (type === 'design'){
         targetLink = '_self';
     }
@@ -201,8 +200,7 @@ $('#contact-button').on('click touchstart',function(e){
 
 function closeNavMenu() {
     $('#navMenu').css("display", "none");
-}
-
+} 
 
 $(document).ready(function() { 
 
