@@ -97,7 +97,7 @@ nav {
     font-family : Share Tech Mono;
     color : white;
     font-size : 2em;
-}
+} 
 
 #social {
     margin-left: -8px;
@@ -331,6 +331,11 @@ nav {
     margin-left : auto;
     margin-right : auto; 
     margin-top : 25px;
+    -webkit-transition:color 1s ease-in; 
+}
+
+#more:hover {
+    background-color : #6653FF;
 }
 
 #moreLink {
@@ -733,7 +738,12 @@ p {
     color: white;
     margin: 0px 0px 0px 20px;
     white-space: nowrap;  
+    -webkit-transition:color 2s ease-in;
 }
+
+.tagWhite:hover {
+    background: #6653FF; 
+} 
 
 #tagWindow {
   display: inline-block;
@@ -853,10 +863,15 @@ textarea {
     width: 30%; 
     text-align : center;
     margin-bottom : 10px; 
+    -webkit-transition:color 1s ease-in; 
 }
 
 .folioTag a {
     font-size : 1.25rem;
+}
+
+.folioTag:hover {
+    background-color : #6653FF;
 }
 
 .copyRight {

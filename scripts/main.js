@@ -361,8 +361,7 @@ $(document).ready(function() {
         e.preventDefault();
         closeNavMenu();
         window.location.href = 'http://www.designertoshi.com/develop';
-    });
-
+    });  
 
     $('#navHeadClose').on('click', function(e){
         e.preventDefault();
