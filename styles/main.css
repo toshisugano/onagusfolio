@@ -813,7 +813,7 @@ textarea {
 .folioDiv20 {
     margin: 0px 20px 0px 0px;
     display: inline-block;
-    width: 240px;
+    width: 200px;
     min-height: 460px;
     background-color: black;
     vertical-align: top;   
@@ -985,6 +985,7 @@ input, select, textarea {
         font-family : Share Tech Mono;
         font-size : 1.5em;
         color : white;
+        text-align : center;
     }
 
     .folioTitle {  
@@ -1073,7 +1074,7 @@ input, select, textarea {
 @media (min-width: 641px) {
     
     .folioDiv20 {
-        width: 33.3334%;
+        width: 25%;
         margin: 0px 0px 0px 0px;
     }
 
