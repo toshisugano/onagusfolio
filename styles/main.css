@@ -1,8 +1,5 @@
  
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono|Ubuntu+Mono');
-
-
-
 @charset "UTF-8";
 
 {
@@ -126,11 +123,6 @@ nav {
 
 } 
 
-.videoWrapper { 
-}
-.videoWrapper iframe {  
-}
-
 .headerWindow { 
     display : block;
     position : inline;
@@ -172,7 +164,6 @@ nav {
     line-height : 40px;
     vertical-align : middle;
 }
-
  
 .navWindow h1 { 
     color : #39201b; 
@@ -841,6 +832,7 @@ textarea {
     margin: 0px auto;
     font-size: 1.2rem;
     font-family: 'Share Tech Mono', arial, sans-serif;
+    text-align: center;
 }
 
 .folioTitle {
