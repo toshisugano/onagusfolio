@@ -230,7 +230,7 @@ nav {
     margin-top : -28px; 
     margin-bottom: -16px;
     z-index: 0;
-    background-color: black; 
+    background-color: #eefc3a; 
     /**/
     -webkit-transform: translate3d(0,0,0);
 }
@@ -255,6 +255,7 @@ nav {
     margin-left : auto;
     margin-right : auto; 
     margin-top : 5px;
+    color: black; 
 }
 
 
@@ -266,7 +267,7 @@ nav {
     display: inline-block;
     position: fixed;
     margin: 0 auto ;
-    background-color: black;
+    background-color: #eefc3a; 
     position: relative; 
     -webkit-transform: translate3d(0,0,0);
     text-align : center;
@@ -313,7 +314,7 @@ nav {
 }
 
 #more {
-    border : 1px solid white;
+    border : 1px solid black;
     width : 80px;
     border-radius : 25px;
     height : 30px;
@@ -336,7 +337,7 @@ nav {
     vertical-align: middle;
     margin-top : 0px;
     float : left;
-    color : white;
+    color : black;
     font-size : 1.5rem;
     margin-left : 12px;
 }
@@ -371,13 +372,16 @@ nav {
 #deviconContainer {
     width : 100%;
     background-color : white;
-    margin-bottom : -35px;
+    margin-bottom : -35px;  
+    padding-top : 55px;
+    padding-bottom : 55px;
 }
 
 #devicon {
     height : 125px;
     width : 125px;
     cursor : pointer;
+
 }
 
 .icon {
@@ -396,11 +400,11 @@ nav {
 
 #desH1 {
     cursor : pointer;
-    color : white;
+    color : black;
 }
 
 .desicon {
-    margin-top : 25px;
+    margin-top : 55px;
     margin-bottom : 25px;
     box-sizing : border-box;
     text-align : center;  
@@ -542,8 +546,9 @@ nav {
     height: 0px;
     margin: 0 auto;
     border: none;
-    background-color: black;
+    background-color: white;
     position: relative;
+    padding-bottom : 55px;
 }
 
 #container5 {
@@ -552,24 +557,26 @@ nav {
     height: 0px;
     margin: 0 auto;
     border: none;
-    background-color: black;
+    background-color: #eefc3a;
     position: relative;
+    padding-bottom : 55px;
 }
 
 .folioWrapper {
     margin: 0 0px 0px 0px;
-    max-width: 100%;
+    max-width: 80%;
     min-height: 500px;
-    background-color: black;
+    background-color : #eefc3a;
     display : block;
+    margin: 0 auto;
 } 
 
 .folioCenter {
     width: 100%;
     height: 100%;
     margin: 0 0px 0 -0px;
-    padding-left : -1px;
-    background-color: black;
+    padding-left : -1px; 
+    background-color : #eefc3a;
     overflow: hidden;
     text-align: center; 
     display : block;
@@ -623,7 +630,7 @@ li {
     vertical-align: middle;
     color: white;
     text-decoration: none;
-    line-height: 40px;
+    line-height: 40px; 
 }
 
 
@@ -654,7 +661,7 @@ h1 {
 h2 {
     font-size: 1.5em;
     font-style: none;
-    color: white; 
+    color: black; 
     font-family:  'Share Tech Mono', arial, sans-serif;
 }
 
@@ -802,19 +809,21 @@ textarea {
 }
 
 .folioDiv20 {
-    margin: 0px 20px 0px 0px;
+    margin: 0px 20px 0px 0px; 
+    margin-left : 20px;
+    margin-right : 20px;
     display: inline-block;
     width: 200px;
     min-height: 460px;
     background-color: black;
     vertical-align: top;   
-    padding-bottom : 20px; 
+    padding-bottom : 20px;  
+    box-shadow: 10px 10px #494745;
 }
 
 .folioImg {
     width : 100%;
-}
-
+} 
 
 .folioImage20 {
     width: 100%; 
@@ -1066,7 +1075,7 @@ input, select, textarea {
 @media (min-width: 641px) {
     
     .folioDiv20 {
-        width: 25%;
+        width: 33.3333%;
         margin: 0px 0px 0px 0px;
     }
 
