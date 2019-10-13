@@ -561,7 +561,7 @@ nav {
     margin: 0 0px 0px 0px;
     max-width: 80%;
     min-height: 500px;
-    background-color : #eefc3a;
+    background-color : black;
     display : block;
     margin: 0 auto;
 } 
@@ -819,6 +819,8 @@ textarea {
 
 .folioImg {
     width : 100%;
+    margin-bottom : -3px;
+    margin-top : -3px;
 } 
 
 .folioImage20 {

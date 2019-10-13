@@ -232,13 +232,13 @@ $(document).ready(function() {
             $('#buttonVisual').css("pointer-events", "auto");
             flickrAPI(jsUrl, 'folioCenter', 'develop');
             window.scrollTo(0, 0);  
-        }, 100); 
+        }, 500); 
     }
 
     if(currURL.slice((length-6), (length)) == 'design'){
-        $('#symbolContainer').empty();
-        $('#deviconContainer').empty();
         $('#logoContainer').empty(); 
+        $('#symbolContainer').empty();
+        $('#deviconContainer').empty(); 
         $('#container4').empty();
 
         setTimeout(function(){   
@@ -254,7 +254,7 @@ $(document).ready(function() {
             $('#buttonVisual').css("pointer-events", "none");
             flickrAPI(visualUrl, 'desfolioCenter', 'design'); 
             window.scrollTo(0, 0); 
-        }, 100); 
+        }, 500); 
     } 
 
     $('#buttonAll').on('click', function(e){
