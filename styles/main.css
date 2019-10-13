@@ -806,6 +806,7 @@ textarea {
 }
 
 .folioDiv20 {
+    box-sizing: border-box;
     margin: 0px 20px 0px 0px; 
     margin-left : 20px;
     margin-right : 20px;
@@ -815,6 +816,7 @@ textarea {
     background-color: black;
     vertical-align: top;   
     padding-bottom : 20px;   
+    border : 10px solid white;
 }
 
 .folioImg {
