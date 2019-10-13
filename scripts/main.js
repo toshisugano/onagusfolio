@@ -221,7 +221,7 @@ $(document).ready(function() {
 
         setTimeout(function(){ 
             $('#deviconContainer').html('<div class="icon">' +
-                                            '<img id="devicon" src="images/developericon.jpg"/>' +
+                                            '<img id="devicon" src="images/devicon.png"/>' +
                                             '<h1 id="devH1">Development Projects</h1>' +
                                             '</div>');    
             $('#container4').html('<div class="folioWrapper">' + 
@@ -243,7 +243,7 @@ $(document).ready(function() {
 
         setTimeout(function(){   
             $('#desiconContainer').html('<div class="desicon">' +
-                                            '<img id="desicon" src="images/designicon.jpg"/>' +
+                                            '<img id="desicon" src="images/desicon.png"/>' +
                                             '<h1 id="desH1">Design Projects</h1>'+
                                             '</div> '
                                             ); 
@@ -281,7 +281,7 @@ $(document).ready(function() {
         $('#logoContainer').empty();
         $('#symbolContainer').empty();
         $('#deviconContainer').html('<div class="icon">' +
-                                        '<img id="devicon" src="images/developericon.jpg"/>' +
+                                        '<img id="devicon" src="images/devicon.png"/>' +
                                         '<h1 id="devH1">Development Projects</h1>' +
                                         '</div>');    
         $('#container4').html('<div class="folioWrapper">' + 
@@ -301,7 +301,7 @@ $(document).ready(function() {
         $('#deviconContainer').empty();
         $('#container4').empty();
         $('#desiconContainer').html('<div class="desicon">' +
-                                        '<img id="desicon" src="images/designicon.jpg"/>' +
+                                        '<img id="desicon" src="images/desicon.png"/>' +
                                         '<h1 id="desH1">Design Projects</h1>'+
                                         '</div> '
                                         ); 
@@ -322,7 +322,7 @@ $(document).ready(function() {
         var devHeight = document.getElementById('deviconContainer').offsetHeight + document.getElementById('container4').offsetHeight;
         //$('#container4').empty();
         $('#desiconContainer').html('<div class="desicon">' +
-                                        '<img id="desicon" src="images/designicon.jpg"/>' +
+                                        '<img id="desicon" src="images/desicon.png"/>' +
                                         '<h1 id="desH1">Design Projects</h1>'+
                                         '</div> '
                                         ); 

@@ -377,11 +377,9 @@ nav {
     padding-bottom : 25px;
 }
 
-#devicon {
-    height : 125px;
-    width : 125px;
-    cursor : pointer;
-
+#devicon { 
+    width : 255px;
+    cursor : pointer; 
 }
 
 .icon {
@@ -413,8 +411,7 @@ nav {
 }
 
 #desicon {
-    height : 125px;
-    width : 125px;
+    width : 255px;
 }
 
 #desiconContainer {
@@ -524,7 +521,7 @@ nav {
 
 /*FOLIO*/
 #container3 {
-    max-width: 1000px; 
+    max-width: 100%; 
     margin: 0 auto;
     border: none;
     background-color: #494745;
@@ -785,7 +782,7 @@ textarea {
 }
 
 .footerBase {
-    max-width: 990px;
+    max-width: 100%;
     min-height: 50px;
     background-color: black;
     margin: -15px auto 0px auto;
@@ -817,8 +814,7 @@ textarea {
     min-height: 460px;
     background-color: black;
     vertical-align: top;   
-    padding-bottom : 20px;  
-    box-shadow: 10px 10px #494745;
+    padding-bottom : 20px;   
 }
 
 .folioImg {
