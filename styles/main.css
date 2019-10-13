@@ -544,8 +544,7 @@ nav {
     margin: 0 auto;
     border: none;
     background-color: white;
-    position: relative;
-    padding-bottom : 55px;
+    position: relative; 
 }
 
 #container5 {
