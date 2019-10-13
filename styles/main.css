@@ -382,8 +382,7 @@ nav {
 }
 
 .icon {
-    margin-top : 25px;
-    margin-bottom : 25px;
+    margin-top : 25px; 
     box-sizing : border-box;
     text-align : center;  
     width : 50%;  
