@@ -888,7 +888,7 @@ textarea {
 
 input, select, textarea {
     font-size: 133%;
-}
+} 
 
 @media (min-width: 200px) and (max-width: 640px) {  
     #aboutHeader {
@@ -916,6 +916,10 @@ input, select, textarea {
         width: 100%;
         height: 100%;
     }
+
+    #deviconContainer {
+        margin-top : -25px;
+    } 
  
 
     .containerMain p { 
