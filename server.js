@@ -58,6 +58,11 @@ app.get('/projects/znalytics_2' , function(req, res ){
     res.sendFile(__dirname + '/projects/znalytics_2/index.html');
 });  
 
+app.get('/projects/banyan_one' , function(req, res ){ 
+        res.sendFile(__dirname + '/projects/banyan_one/index.html');
+    }); 
+
+
 //Develop 
 app.get('/develop' , function(req, res ){ 
     res.sendFile(__dirname + '/dev.html');
