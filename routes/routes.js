@@ -26,6 +26,10 @@ module.exports = (app) => {
 	    res.sendFile(__dirname + '/projects/leeches/index.html');
 	}); 
 
+	app.get('/projects/banyan_one' , function(req, res ){ 
+	    res.sendFile(__dirname + '/projects/banyan_one/index.html');
+	}); 
+
 
 	//Develop 
 	app.get('/develop' , function(req, res ){ 
