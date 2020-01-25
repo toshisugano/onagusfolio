@@ -60,7 +60,11 @@ app.get('/projects/znalytics_2' , function(req, res ){
 
 app.get('/projects/banyan_one' , function(req, res ){ 
         res.sendFile(__dirname + '/projects/banyan_one/index.html');
-    }); 
+}); 
+
+app.get('/projects/prospekt' , function(req, res ){ 
+        res.sendFile(__dirname + '/projects/prospekt/index.html');
+}); 
 
 
 //Develop 
